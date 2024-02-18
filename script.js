@@ -1,7 +1,7 @@
-const button = document.querySelector("button");
+const button = document.querySelector(".submit-btn");
 const wrapper = document.querySelector(".wrapper");
 const banner = document.querySelector(".banner");
-const spanNumbers = document.querySelectorAll("span");
+const spanNumbers = document.querySelectorAll(".circle");
 
 let textContent = "";
 let currentSpan = null;
@@ -11,6 +11,7 @@ function addColor(e) {
     currentSpan.style.backgroundColor = "";
   }
   e.target.style.backgroundColor = "#fd7614";
+  e.target.style.color = "#fff"
   textContent = e.target.textContent;
   currentSpan = e.target;
 }
@@ -54,7 +55,7 @@ function removeWrapper() {
 
 function buttonClickHandler() {
   if (!textContent) {
-    alert("Please choose a number");
+    alert("Please choose a number!");
   } else {
     removeWrapper();
     createElements();
