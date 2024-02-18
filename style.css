@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #141519;
+ 
+}
+
+img {
+  max-width: 100%;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* COLORS */
+.color-white {
+  color: #fff;
+}
+
+.color-orange {
+  color: #fd7614;
+}
+
+.color-grey {
+  color: #8c939d;
+}
+
+/* FLEX PROPERTIES */
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* MARGIN AND PADDING */
+.m-top-1rem {
+  margin-top: 1rem;
+}
+
+.m-bottom-1rem {
+  margin-bottom: 1rem;
+}
+
+.m-right-minus-1rem {
+  margin-right: -1rem;
+}
+
+.padding-1rem {
+  padding: 0.5rem 1rem;
+}
+
+/* COMMON PROPERTIES */
+.w-100 {
+  width: 100%;
+}
+
+.border-outline-none {
+  border: none;
+  outline: none;
+}
+
+.background-radius {
+  background-color: #262f38;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ft-size-0-8rem {
+  font-size: 0.8rem;
+}
+
+.wrapper {
+  background-color: #212832;
+  max-width: 350px;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+}
+
+.banner {
+  background-color: #212832;
+  max-width: 350px;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+}
+
+.p-top {
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #8c939d;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #262f38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8c939d;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.circle:hover {
+  background-color: #7d8998;
+  color: #fff;
+}
+
+.submit-btn {
+  background-color: #fd7614;
+  margin-top: 1.5rem;
+  padding: 0.7rem 0;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #fff;
+  color: #fd7614;
+}
