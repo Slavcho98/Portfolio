@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #edf2f8;
+}
+
+.first-row img {
+  max-width: 100%;
+  display: block;
+  border-radius: 20px 0 0 20px;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* colors */
+.color-white {
+  color: #fff;
+}
+
+.color-gray {
+  color: #505764;
+}
+
+.color-light-gray {
+  color: hsl(212, 23%, 69%);
+}
+
+/* general properties */
+.ft-size-0-8 {
+  font-size: 0.8rem;
+}
+
+.gap-1rem {
+  gap: 1rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.letter-spacing-2px {
+  letter-spacing: 5px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 55%;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #fff;
+}
+
+.img-2 {
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* container/flex */
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-basis-40 {
+  flex-basis: 40%;
+}
+
+.flex-basis-60 {
+  flex-basis: 60%;
+}
+
+.first-row {
+  border-radius: 20px 0 0 20px;
+}
+
+.second-row {
+  padding: 2rem;
+}
+
+/* positions */
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.icon-circle {
+  width: 35px;
+  height: 35px;
+  background-color: #70829a;
+  border-radius: 50%;
+}
+
+.fa-share {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.share {
+  background-color: #505764;
+  right: -3rem;
+  bottom: 7rem;
+  width: 30%;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  visibility: hidden;
+}
+
+.share:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: #505764 transparent;
+  border-width: 15px 15px 0;
+  bottom: -15px;
+  left: 50%;
+}

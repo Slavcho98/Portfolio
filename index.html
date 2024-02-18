@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/> -->
+    <title>Frontend Mentor | Article preview component</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper d-flex p-relative">
+      <div class="first-row d-flex flex-basis-40">
+        <img src="./images/drawers.jpg" alt="" />
+      </div>
+      <div class="second-row flex-basis-60">
+        <h1 class="color-gray">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+
+        <p class="color-gray ft-size-0-8">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <div class="d-flex space-between align-center">
+          <div class="d-flex gap-1rem">
+            <div>
+              <img src="./images/avatar-michelle.jpg" alt="" class="img-2" />
+            </div>
+            <div>
+              <h4 class="color-gray">Michelle Appleton</h4>
+              <span class="color-gray ft-size-0-8"> 28 Jun 2020</span>
+            </div>
+          </div>
+          <div class="icon-circle p-relative cursor-pointer">
+            <i class="fa-solid fa-share p-absolute color-white"></i>
+          </div>
+        </div>
+      </div>
+      <div class="share d-flex justify-center align-center p-absolute gap-1rem color-white">
+        <p class="uppercase letter-spacing-2px color-light-gray ft-size-0-8">share</p>
+        <a href="https://www.facebook.com/"
+           class="color-white"><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/?lang=en" class="color-white"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="" class="color-white"> <i class="fa-brands fa-pinterest"></i></a>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
