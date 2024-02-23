@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  z-index: -1;
+  background-color: gray;
+}
+
+.side-column {
+  background-size: cover;
+  background-position: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("person1.jpg");
+}
