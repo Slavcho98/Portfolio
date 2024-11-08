@@ -8,7 +8,7 @@ type ButtonProps = {
 
 function Button({ el, children, ...props }: ButtonProps) {
   if (el === "anchor") return <a {...props}>{children}</a>;
-  return <button>{children}</button>;
+  return <button {...props}>{children}</button>;
 }
 
 export default Button;
