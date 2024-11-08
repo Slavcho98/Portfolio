@@ -4,22 +4,23 @@
       "id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
       "name": "Shoes",
       "description": "Footwear for various activities and styles",
-      "itemCount": 60
+      "itemCount": 60,
+      "types": "Sneakers"
     },
     {
       "id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
       "name": "Textiles",
       "description": "Clothing items like T-shirts and Hoodies",
-      "itemCount": 120,
+      "itemCount": 60,
       "types": ["T-shirt", "Hoodie"]
     }
   ],
   "filters": {
     "gender": ["Male", "Female", "Unisex"],
-    "brand": ["Nike", "Adidas", "Puma"],
+    "brand": ["Nike", "Adidas"],
     "color": ["Red", "Blue", "Black", "White"],
     "size": {
-      "shoes": [7, 8, 9, 10, 11, 12],
+      "shoes": [40.5, 41, 42, 43, 43.5, 44, 44.5, 45, 46],
       "textiles": ["XS", "S", "M", "L", "XL", "XXL"]
     },
     "priceRange": {
@@ -35,15 +36,28 @@
       "gender": "Male",
       "brand": "Nike",
       "price": 120,
-      "color": "Black",
-      "size": 10,
-      "images": [
-        "shoes/nike_airmax_90_1.jpg",
-        "shoes/nike_airmax_90_2.jpg",
-        "shoes/nike_airmax_90_3.jpg",
-        "shoes/nike_airmax_90_4.jpg"
+      "size": [40.5, 41, 42, 43, 45],
+      "description": "The classic Nike Air Max 90, designed for both comfort and style.",
+      "variants": [
+        {
+          "color": "Black",
+          "images": [
+            "shoes/nike_airmax_90_black_1.png",
+            "shoes/nike_airmax_90_black_2.png",
+            "shoes/nike_airmax_90_black_3.png",
+            "shoes/nike_airmax_90_black_4.png"
+          ]
+        },
+        {
+          "color": "White",
+          "images": [
+            "shoes/nike_airmax_90_white_1.png",
+            "shoes/nike_airmax_90_white_2.png",
+            "shoes/nike_airmax_90_white_3.png",
+            "shoes/nike_airmax_90_white_4.png"
+          ]
+        }
       ],
-      "description": "The classic Nike Air Max 90 in black, designed for both comfort and style.",
       "reviews": [
         {
           "reviewer": "John Doe",
@@ -59,6 +73,7 @@
         }
       ]
     },
+
     {
       "id": "d4e5f6",
       "title": "Adidas Ultraboost 22",
@@ -734,7 +749,7 @@
           "date": "2023-09-03"
         }
       ]
-    }, 
+    },
 
     {
       "id": "p31",
