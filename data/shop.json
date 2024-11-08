@@ -1,0 +1,1538 @@
+{
+  "categories": [
+    {
+      "id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "name": "Shoes",
+      "description": "Footwear for various activities and styles",
+      "itemCount": 60
+    },
+    {
+      "id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "name": "Textiles",
+      "description": "Clothing items like T-shirts and Hoodies",
+      "itemCount": 120,
+      "types": ["T-shirt", "Hoodie"]
+    }
+  ],
+  "filters": {
+    "gender": ["Male", "Female", "Unisex"],
+    "brand": ["Nike", "Adidas", "Puma"],
+    "color": ["Red", "Blue", "Black", "White"],
+    "size": {
+      "shoes": [7, 8, 9, 10, 11, 12],
+      "textiles": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    "priceRange": {
+      "shoes": { "min": 50, "max": 500 },
+      "textiles": { "min": 20, "max": 200 }
+    }
+  },
+  "products": [
+    {
+      "id": "a1b2c3",
+      "title": "Nike Air Max 90",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Male",
+      "brand": "Nike",
+      "price": 120,
+      "color": "Black",
+      "size": 10,
+      "images": [
+        "shoes/nike_airmax_90_1.jpg",
+        "shoes/nike_airmax_90_2.jpg",
+        "shoes/nike_airmax_90_3.jpg",
+        "shoes/nike_airmax_90_4.jpg"
+      ],
+      "description": "The classic Nike Air Max 90 in black, designed for both comfort and style.",
+      "reviews": [
+        {
+          "reviewer": "John Doe",
+          "rating": 4.5,
+          "comment": "Super comfortable and stylish!",
+          "date": "2023-10-01"
+        },
+        {
+          "reviewer": "Jane Smith",
+          "rating": 4.0,
+          "comment": "Great for everyday wear, but runs slightly large.",
+          "date": "2023-09-15"
+        }
+      ]
+    },
+    {
+      "id": "d4e5f6",
+      "title": "Adidas Ultraboost 22",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Unisex",
+      "brand": "Adidas",
+      "price": 180,
+      "color": "White",
+      "size": 9,
+      "images": [
+        "adidas_ultraboost_22_1.jpg",
+        "adidas_ultraboost_22_2.jpg",
+        "adidas_ultraboost_22_3.jpg",
+        "adidas_ultraboost_22_4.jpg"
+      ],
+      "description": "The Adidas Ultraboost 22 offers superior comfort and energy return, perfect for running and everyday wear.",
+      "reviews": [
+        {
+          "reviewer": "Tom Johnson",
+          "rating": 5,
+          "comment": "Incredible comfort and cushioning!",
+          "date": "2023-07-15"
+        }
+      ]
+    },
+    {
+      "id": "g7h8i9",
+      "title": "Puma RS-X3 Puzzle",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Male",
+      "brand": "Puma",
+      "price": 100,
+      "color": "Blue",
+      "size": 11,
+      "images": [
+        "puma_rsx3_puzzle_1.jpg",
+        "puma_rsx3_puzzle_2.jpg",
+        "puma_rsx3_puzzle_3.jpg",
+        "puma_rsx3_puzzle_4.jpg"
+      ],
+      "description": "The Puma RS-X3 Puzzle combines bold design with comfort, perfect for streetwear and casual outings.",
+      "reviews": [
+        {
+          "reviewer": "Jack White",
+          "rating": 4.2,
+          "comment": "Stylish but a bit stiff initially.",
+          "date": "2023-06-25"
+        }
+      ]
+    },
+    {
+      "id": "j0k1l2",
+      "title": "Reebok Classic Leather",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Female",
+      "brand": "Reebok",
+      "price": 75,
+      "color": "Red",
+      "size": 7,
+      "images": [
+        "reebok_classic_leather_1.jpg",
+        "reebok_classic_leather_2.jpg",
+        "reebok_classic_leather_3.jpg",
+        "reebok_classic_leather_4.jpg"
+      ],
+      "description": "A timeless classic from Reebok with soft leather and retro style.",
+      "reviews": [
+        {
+          "reviewer": "Emma Green",
+          "rating": 4.5,
+          "comment": "Great quality, though the fit is a little narrow.",
+          "date": "2023-05-18"
+        }
+      ]
+    },
+    {
+      "id": "m3n4o5",
+      "title": "New Balance 574",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Unisex",
+      "brand": "New Balance",
+      "price": 85,
+      "color": "Grey",
+      "size": 10,
+      "images": [
+        "new_balance_574_1.jpg",
+        "new_balance_574_2.jpg",
+        "new_balance_574_3.jpg",
+        "new_balance_574_4.jpg"
+      ],
+      "description": "The New Balance 574 offers a classic style with great comfort and durability.",
+      "reviews": [
+        {
+          "reviewer": "Chris Blue",
+          "rating": 4.8,
+          "comment": "Comfortable for all-day wear and versatile.",
+          "date": "2023-08-02"
+        }
+      ]
+    },
+    {
+      "id": "p6q7r8",
+      "title": "Under Armour HOVR Phantom",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Male",
+      "brand": "Under Armour",
+      "price": 130,
+      "color": "Black/Orange",
+      "size": 11,
+      "images": [
+        "under_armour_hovr_phantom_1.jpg",
+        "under_armour_hovr_phantom_2.jpg",
+        "under_armour_hovr_phantom_3.jpg",
+        "under_armour_hovr_phantom_4.jpg"
+      ],
+      "description": "The HOVR Phantom by Under Armour delivers unmatched energy return with a sleek design.",
+      "reviews": [
+        {
+          "reviewer": "Lucas Roy",
+          "rating": 4.7,
+          "comment": "Great for running, very responsive.",
+          "date": "2023-09-12"
+        }
+      ]
+    },
+    {
+      "id": "s9t0u1",
+      "title": "Vans Old Skool",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Unisex",
+      "brand": "Vans",
+      "price": 60,
+      "color": "Black/White",
+      "size": 8,
+      "images": [
+        "vans_old_skool_1.jpg",
+        "vans_old_skool_2.jpg",
+        "vans_old_skool_3.jpg",
+        "vans_old_skool_4.jpg"
+      ],
+      "description": "Vans Old Skool is a classic skate shoe with a durable design and iconic side stripe.",
+      "reviews": [
+        {
+          "reviewer": "Megan Sky",
+          "rating": 4.4,
+          "comment": "Classic and comfortable, but the sole wears out quickly.",
+          "date": "2023-06-20"
+        }
+      ]
+    },
+    {
+      "id": "w2x3y4",
+      "title": "Converse Chuck Taylor All Star",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Male",
+      "brand": "Converse",
+      "price": 50,
+      "color": "Blue",
+      "size": 9,
+      "images": [
+        "converse_chuck_taylor_all_star_1.jpg",
+        "converse_chuck_taylor_all_star_2.jpg",
+        "converse_chuck_taylor_all_star_3.jpg",
+        "converse_chuck_taylor_all_star_4.jpg"
+      ],
+      "description": "The iconic Converse Chuck Taylor, perfect for casual outings and comfort.",
+      "reviews": [
+        {
+          "reviewer": "James Dark",
+          "rating": 4.0,
+          "comment": "Comfortable, but the fit can be a bit loose.",
+          "date": "2023-05-10"
+        }
+      ]
+    },
+    {
+      "id": "z5a6b7",
+      "title": "Reebok Nano X2",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Female",
+      "brand": "Reebok",
+      "price": 110,
+      "color": "Pink",
+      "size": 7,
+      "images": [
+        "reebok_nano_x2_1.jpg",
+        "reebok_nano_x2_2.jpg",
+        "reebok_nano_x2_3.jpg",
+        "reebok_nano_x2_4.jpg"
+      ],
+      "description": "The Reebok Nano X2 is designed for high-intensity workouts with superior stability and durability.",
+      "reviews": [
+        {
+          "reviewer": "Sophia Gold",
+          "rating": 5.0,
+          "comment": "Best training shoe I've ever worn!",
+          "date": "2023-07-03"
+        }
+      ]
+    },
+
+    {
+      "id": "p11a2b3",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p12c4d5",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p13e6f7",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p14g7h8",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p15h9i0",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p16i1j2",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p17j3k4",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p18k5l6",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p19l7m8",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p20m9n0",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "f9b8a721",
+      "title": "Nike Air Zoom Pegasus 39",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Male",
+      "brand": "Nike",
+      "price": 120,
+      "color": "Black/Red",
+      "size": 10,
+      "images": [
+        "nike_pegasus_1.jpg",
+        "nike_pegasus_2.jpg",
+        "nike_pegasus_3.jpg",
+        "nike_pegasus_4.jpg"
+      ],
+      "description": "The Nike Air Zoom Pegasus 39 offers the perfect combination of speed and comfort.",
+      "reviews": [
+        {
+          "reviewer": "John Doe",
+          "rating": 4,
+          "comment": "Very comfortable but a bit narrow for my feet.",
+          "date": "2023-09-12"
+        }
+      ]
+    },
+    {
+      "id": "f96b0c34",
+      "title": "Asics Gel Nimbus 25",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Female",
+      "brand": "Asics",
+      "price": 140,
+      "color": "Silver/Pink",
+      "size": 7.5,
+      "images": [
+        "asics_nimbus_1.jpg",
+        "asics_nimbus_2.jpg",
+        "asics_nimbus_3.jpg",
+        "asics_nimbus_4.jpg"
+      ],
+      "description": "Asics Gel Nimbus 25 provides ultimate cushioning for long-distance runners.",
+      "reviews": [
+        {
+          "reviewer": "Sara Lee",
+          "rating": 5,
+          "comment": "Perfect for long runs, great cushion and support.",
+          "date": "2023-07-20"
+        }
+      ]
+    },
+    {
+      "id": "9e4bcf7e",
+      "title": "Puma Speed 600 2",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Male",
+      "brand": "Puma",
+      "price": 110,
+      "color": "Blue/White",
+      "size": 9,
+      "images": [
+        "puma_speed_1.jpg",
+        "puma_speed_2.jpg",
+        "puma_speed_3.jpg",
+        "puma_speed_4.jpg"
+      ],
+      "description": "Puma Speed 600 2 is engineered for fast-paced runners looking for speed and durability.",
+      "reviews": [
+        {
+          "reviewer": "Michael Brown",
+          "rating": 4,
+          "comment": "Great for short-distance sprints but slightly stiff for long runs.",
+          "date": "2023-08-05"
+        }
+      ]
+    },
+    {
+      "id": "01762bda",
+      "title": "Under Armour Hovr Sonic 5",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Female",
+      "brand": "Under Armour",
+      "price": 130,
+      "color": "Gray/Black",
+      "size": 8.5,
+      "images": [
+        "under_armour_hovr_1.jpg",
+        "under_armour_hovr_2.jpg",
+        "under_armour_hovr_3.jpg",
+        "under_armour_hovr_4.jpg"
+      ],
+      "description": "Under Armour Hovr Sonic 5 is designed for a responsive feel and comfortable, high-mileage runs.",
+      "reviews": [
+        {
+          "reviewer": "Jessica Smith",
+          "rating": 5,
+          "comment": "Light, comfortable, and the cushioning is perfect for long runs.",
+          "date": "2023-09-01"
+        }
+      ]
+    },
+    {
+      "id": "ec8772f1",
+      "title": "Brooks Ghost 15",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Male",
+      "brand": "Brooks",
+      "price": 115,
+      "color": "Green/Black",
+      "size": 10.5,
+      "images": [
+        "brooks_ghost_1.jpg",
+        "brooks_ghost_2.jpg",
+        "brooks_ghost_3.jpg",
+        "brooks_ghost_4.jpg"
+      ],
+      "description": "The Brooks Ghost 15 provides a soft, smooth ride with plenty of cushioning.",
+      "reviews": [
+        {
+          "reviewer": "James Williams",
+          "rating": 4,
+          "comment": "Comfortable and cushioned, but the fit could be improved.",
+          "date": "2023-08-25"
+        }
+      ]
+    },
+    {
+      "id": "ea6732ff",
+      "title": "New Balance Fresh Foam 1080v12",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Female",
+      "brand": "New Balance",
+      "price": 150,
+      "color": "Purple/Gray",
+      "size": 7,
+      "images": [
+        "new_balance_1080v12_1.jpg",
+        "new_balance_1080v12_2.jpg",
+        "new_balance_1080v12_3.jpg",
+        "new_balance_1080v12_4.jpg"
+      ],
+      "description": "New Balance Fresh Foam 1080v12 delivers premium cushioning for ultimate comfort on every run.",
+      "reviews": [
+        {
+          "reviewer": "Karen Taylor",
+          "rating": 5,
+          "comment": "Very comfortable, ideal for long-distance runs and everyday wear.",
+          "date": "2023-09-15"
+        }
+      ]
+    },
+    {
+      "id": "b0b171d9",
+      "title": "Saucony Endorphin Speed 3",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Male",
+      "brand": "Saucony",
+      "price": 160,
+      "color": "Orange/Black",
+      "size": 11,
+      "images": [
+        "saucony_endorphin_1.jpg",
+        "saucony_endorphin_2.jpg",
+        "saucony_endorphin_3.jpg",
+        "saucony_endorphin_4.jpg"
+      ],
+      "description": "The Saucony Endorphin Speed 3 offers a perfect blend of speed, comfort, and versatility.",
+      "reviews": [
+        {
+          "reviewer": "David Lee",
+          "rating": 5,
+          "comment": "Incredible for sprints and speed training, highly recommend!",
+          "date": "2023-07-30"
+        }
+      ]
+    },
+    {
+      "id": "809281fc",
+      "title": "Nike ZoomX Vaporfly Next% 2",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Female",
+      "brand": "Nike",
+      "price": 250,
+      "color": "White/Volt",
+      "size": 9.5,
+      "images": [
+        "nike_vaporfly_1.jpg",
+        "nike_vaporfly_2.jpg",
+        "nike_vaporfly_3.jpg",
+        "nike_vaporfly_4.jpg"
+      ],
+      "description": "Nike ZoomX Vaporfly Next% 2 is built for elite marathon runners, offering the best combination of speed and comfort.",
+      "reviews": [
+        {
+          "reviewer": "Emily Johnson",
+          "rating": 5,
+          "comment": "Perfect for races, gives an extra edge in terms of speed and comfort!",
+          "date": "2023-08-12"
+        }
+      ]
+    },
+    {
+      "id": "4d30cf73",
+      "title": "Adidas Ultraboost 22",
+      "category_id": "cdb59e5d-2f25-4f2a-8a18-84d6b8c38e5f",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 180,
+      "color": "Gray/White",
+      "size": 8,
+      "images": [
+        "adidas_ultraboost_1.jpg",
+        "adidas_ultraboost_2.jpg",
+        "adidas_ultraboost_3.jpg",
+        "adidas_ultraboost_4.jpg"
+      ],
+      "description": "Adidas Ultraboost 22 provides maximum comfort and energy return with every stride.",
+      "reviews": [
+        {
+          "reviewer": "Lily Evans",
+          "rating": 4,
+          "comment": "Amazing cushion and comfort, but they feel a little too bulky for me.",
+          "date": "2023-09-03"
+        }
+      ]
+    }, 
+
+    {
+      "id": "p31",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p32",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p33",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p34",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p35",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p36",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p37",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p38",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p39",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p40",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p41",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p42",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p43",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p44",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p45",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p46",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p47",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p48",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p49",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p50",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p51",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p52",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p53",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p54",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p55",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p56",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p57",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p58",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p59",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p60",
+      "title": "Adidas Running Shoes",
+      "category_id": "b9dfd913-ffb1-49d6-9f10-1d0cddb5f0c2",
+      "gender": "Female",
+      "brand": "Adidas",
+      "price": 95,
+      "color": "White",
+      "size": 8,
+      "images": [
+        "adidas_running_1.jpg",
+        "adidas_running_2.jpg",
+        "adidas_running_3.jpg",
+        "adidas_running_4.jpg"
+      ],
+      "description": "Lightweight running shoes by Adidas, ideal for long-distance running.",
+      "reviews": [
+        {
+          "reviewer": "Alice Brown",
+          "rating": 5,
+          "comment": "Excellent shoes for running, very light and breathable!",
+          "date": "2023-08-10"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Casual T-Shirt",
+      "category_id": "2",
+      "type": "T-shirt",
+      "gender": "Unisex",
+      "brand": "Puma",
+      "price": 30,
+      "color": "Blue",
+      "size": "M",
+      "images": ["puma_tshirt_1.jpg", "puma_tshirt_2.jpg", "puma_tshirt_3.jpg"],
+      "description": "Soft cotton T-shirt for everyday casual wear.",
+      "reviews": [
+        {
+          "reviewer": "Mark Green",
+          "rating": 4,
+          "comment": "Comfortable fit, but color faded slightly after wash.",
+          "date": "2023-07-12"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "Hoodie - Nike Sportswear",
+      "category_id": "2",
+      "type": "Hoodie",
+      "gender": "Male",
+      "brand": "Nike",
+      "price": 70,
+      "color": "Red",
+      "size": "L",
+      "images": ["nike_hoodie_1.jpg", "nike_hoodie_2.jpg", "nike_hoodie_3.jpg"],
+      "description": "Nike Sportswear hoodie, ideal for both casual wear and workouts.",
+      "reviews": [
+        {
+          "reviewer": "Sarah Parker",
+          "rating": 4.8,
+          "comment": "Great quality hoodie, keeps warm in cold weather!",
+          "date": "2023-05-20"
+        },
+        {
+          "reviewer": "Tom Hanks",
+          "rating": 4.3,
+          "comment": "Very comfortable, but a bit pricey.",
+          "date": "2023-04-18"
+        }
+      ]
+    }
+  ]
+}
