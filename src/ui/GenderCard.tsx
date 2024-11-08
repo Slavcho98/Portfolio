@@ -8,7 +8,7 @@ type GenderCardProps = {
 
 function GenderCard({ src, alt, label }: GenderCardProps) {
   return (
-    <div className="w-1/3 relative overflow-hidden group cursor-pointer">
+    <div className="relative overflow-hidden group cursor-pointer">
       <LazyLoadImage
         src={src}
         alt={alt}
