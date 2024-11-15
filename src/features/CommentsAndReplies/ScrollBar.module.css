@@ -1,0 +1,21 @@
+.scrollableContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollableContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollableContainer::-webkit-scrollbar-thumb {
+  background: #e87b22;
+  border-radius: 4px;
+}
+
+.scrollableContainer::-webkit-scrollbar-thumb:hover {
+  background: #e87b22;
+}
+
+.scrollableContainer {
+  scrollbar-width: thin;
+  scrollbar-color: #e87b22 transparent;
+}
