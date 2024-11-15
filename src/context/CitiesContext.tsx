@@ -68,7 +68,8 @@ function reducer(state: initialStateProps, action: Action): initialStateProps {
 }
 
 function CitiesProvider({ children }: ChildrenProps) {
-  const URL = "http://localhost:3000";
+  // Updated URL (base URL without '/cities')
+  const URL = "https://cities-api-2.onrender.com";
 
   const [{ cities, isLoading, currentCity }, dispatch] = useReducer(
     reducer,
@@ -80,7 +81,7 @@ function CitiesProvider({ children }: ChildrenProps) {
       dispatch({ type: "isLoading" });
 
       try {
-        const res = await fetch(`${URL}/cities`);
+        const res = await fetch(`${URL}/cities`); // Now, URL points to the base URL, '/cities' is appended here
         if (!res.ok) {
           throw new Error("Failed to fetch cities");
         }
@@ -103,7 +104,7 @@ function CitiesProvider({ children }: ChildrenProps) {
 
     dispatch({ type: "isLoading" });
     try {
-      const res = await fetch(`${URL}/cities/${id}`);
+      const res = await fetch(`${URL}/cities/${id}`); // This URL is correct with '/cities' and the city ID
       if (!res.ok) {
         throw new Error("Failed to fetch city");
       }
@@ -122,7 +123,7 @@ function CitiesProvider({ children }: ChildrenProps) {
   async function createCity(newCity: NewCiyProps) {
     dispatch({ type: "isLoading" });
     try {
-      const res = await fetch(`${URL}/cities`, {
+      const res = await fetch(`${URL}/cities`, { // This URL is correct for creating a new city
         method: "POST",
         body: JSON.stringify(newCity),
         headers: {
@@ -130,7 +131,7 @@ function CitiesProvider({ children }: ChildrenProps) {
         },
       });
       if (!res.ok) {
-        throw new Error("Failed to fetch city");
+        throw new Error("Failed to create city");
       }
       const data: CityProps = await res.json();
 
@@ -144,10 +145,11 @@ function CitiesProvider({ children }: ChildrenProps) {
       });
     }
   }
+
   async function deleteCity(id: string) {
     dispatch({ type: "isLoading" });
     try {
-      await fetch(`${URL}/cities/${id}`, {
+      await fetch(`${URL}/cities/${id}`, { // This URL is correct for deleting a city
         method: "DELETE",
       });
 
