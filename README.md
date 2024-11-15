@@ -1,50 +1,17 @@
-# React + TypeScript + Vite
+# usePopcorn
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**usePopcorn** is a React application built with TypeScript that allows users to search for movies, rate them, and select watched movies. The app provides a simple and interactive user interface to explore movies and track your movie-watching experience. It is built using React hooks, primarily utilizing `useEffect` for fetching and updating movie data.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search Movies**: Search for movies by name to explore more details about each one.
+- **Rate Movies**: Users can rate movies after watching them, making it easy to track your favorites.
+- **Select Watched Movies**: Mark movies as watched and keep a record of your movie history.
+- **Built with React**: Uses React and TypeScript to ensure type safety and better development experience.
+- **React Hooks**: The app utilizes the `useEffect` hook to fetch movie data and manage component side effects.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that enhances the development process with static type checking.
+- **useEffect**: A React hook used to handle side effects like fetching data from APIs.
