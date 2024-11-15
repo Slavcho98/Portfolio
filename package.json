@@ -8,9 +8,11 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch data/cities.json delay 500"
+    "server": "json-server --watch data/cities.json delay 500",
+    "start": "node index.js"
   },
   "dependencies": {
+    "json-serve": "^0.1.0",
     "json-server": "^1.0.0-beta.3",
     "leaflet": "^1.9.4",
     "react": "^18.3.1",
