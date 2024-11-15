@@ -1,0 +1,21 @@
+.hamburgerMenu {
+  display: none;
+}
+
+@media (max-width: 426px) {
+  .hamburgerMenu {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+    background-color: #ffb545;
+    border-radius: 5px;
+  }
+
+  .hamburgerMenu .secondUl {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
