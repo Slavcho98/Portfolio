@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { io, Socket } from "socket.io-client";
-import { Send } from "lucide-react";
+import { Send, Trash2 } from "lucide-react";
 
 const SOCKET_URL =
   import.meta.env.VITE_CHAT_SERVER_URL || "http://localhost:3001";
@@ -104,16 +104,40 @@ const AdminChat = () => {
     setInput("");
   };
 
+  const deleteConversation = (visitorId: string) => {
+    socketRef.current?.emit("admin:delete", visitorId);
+    if (selectedVisitor === visitorId) {
+      setSelectedVisitor(null);
+      setMessages([]);
+    }
+  };
+
+  const clearAll = () => {
+    socketRef.current?.emit("admin:clear-all");
+    setSelectedVisitor(null);
+    setMessages([]);
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground flex">
       {/* Sidebar — Conversations */}
       <div className="w-80 border-r border-border/50 flex flex-col">
-        <div className="p-4 border-b border-border/50">
-          <h1 className="text-lg font-bold">Admin Chat</h1>
-          <p className="text-xs text-muted-foreground mt-1">
-            {conversations.length} conversation
-            {conversations.length !== 1 ? "s" : ""}
-          </p>
+        <div className="p-4 border-b border-border/50 flex items-center justify-between">
+          <div>
+            <h1 className="text-lg font-bold">Admin Chat</h1>
+            <p className="text-xs text-muted-foreground mt-1">
+              {conversations.length} conversation
+              {conversations.length !== 1 ? "s" : ""}
+            </p>
+          </div>
+          {conversations.length > 0 && (
+            <button
+              onClick={clearAll}
+              className="text-xs text-red-400 hover:text-red-300 transition-colors"
+            >
+              Clear all
+            </button>
+          )}
         </div>
         <div className="flex-1 overflow-y-auto">
           {conversations.length === 0 && (
@@ -122,18 +146,28 @@ const AdminChat = () => {
             </p>
           )}
           {conversations.map((c) => (
-            <button
+            <div
               key={c.visitorId}
-              onClick={() => selectConversation(c.visitorId)}
-              className={`w-full text-left px-4 py-3 border-b border-border/30 hover:bg-secondary/30 transition-colors ${
+              className={`flex items-center border-b border-border/30 hover:bg-secondary/30 transition-colors ${
                 selectedVisitor === c.visitorId ? "bg-secondary/50" : ""
               }`}
             >
-              <p className="text-sm font-medium truncate">{c.visitorId}</p>
-              <p className="text-xs text-muted-foreground truncate mt-0.5">
-                {c.lastMessage || "No messages"}
-              </p>
-            </button>
+              <button
+                onClick={() => selectConversation(c.visitorId)}
+                className="flex-1 text-left px-4 py-3"
+              >
+                <p className="text-sm font-medium truncate">{c.visitorId}</p>
+                <p className="text-xs text-muted-foreground truncate mt-0.5">
+                  {c.lastMessage || "No messages"}
+                </p>
+              </button>
+              <button
+                onClick={() => deleteConversation(c.visitorId)}
+                className="px-3 text-red-400 hover:text-red-300 transition-colors"
+              >
+                <Trash2 className="size-4" />
+              </button>
+            </div>
           ))}
         </div>
       </div>

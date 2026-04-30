@@ -12,7 +12,11 @@ app.get("/healthz", (req, res) => res.send("ok"));
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:8080", "https://portfolio-ecru-ten-20.vercel.app"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:8080",
+      "https://portfolio-ecru-ten-20.vercel.app",
+    ],
     methods: ["GET", "POST"],
   },
 });
@@ -105,6 +109,18 @@ io.on("connection", (socket) => {
     if (socket.data.role === "visitor" && socket.data.visitorId) {
       io.to("admin-room").emit("admin:conversations", getConversationList());
     }
+  });
+
+  // Admin deletes a conversation
+  socket.on("admin:delete", (visitorId) => {
+    conversations.delete(visitorId);
+    io.to("admin-room").emit("admin:conversations", getConversationList());
+  });
+
+  // Admin clears all conversations
+  socket.on("admin:clear-all", () => {
+    conversations.clear();
+    io.to("admin-room").emit("admin:conversations", []);
   });
 });
 
