@@ -12,7 +12,7 @@ app.get("/healthz", (req, res) => res.send("ok"));
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:8080"],
+    origin: ["http://localhost:5173", "http://localhost:8080", "https://portfolio-ecru-ten-20.vercel.app"],
     methods: ["GET", "POST"],
   },
 });

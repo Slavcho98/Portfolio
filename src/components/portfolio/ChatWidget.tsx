@@ -3,7 +3,8 @@ import { io, Socket } from "socket.io-client";
 import { MessageCircle, X, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const SOCKET_URL = import.meta.env.VITE_CHAT_SERVER_URL || "http://localhost:3001";
+const SOCKET_URL =
+  import.meta.env.VITE_CHAT_SERVER_URL || "http://localhost:3001";
 
 interface Message {
   id: string;
@@ -39,12 +40,15 @@ export const ChatWidget = () => {
       setMessages(history);
     });
 
-    socket.on("chat:message", ({ message }: { visitorId: string; message: Message }) => {
-      setMessages((prev) => {
-        if (prev.find((m) => m.id === message.id)) return prev;
-        return [...prev, message];
-      });
-    });
+    socket.on(
+      "chat:message",
+      ({ message }: { visitorId: string; message: Message }) => {
+        setMessages((prev) => {
+          if (prev.find((m) => m.id === message.id)) return prev;
+          return [...prev, message];
+        });
+      },
+    );
 
     return () => {
       socket.disconnect();
@@ -134,7 +138,10 @@ export const ChatWidget = () => {
             </div>
 
             {/* Input */}
-            <form onSubmit={sendMessage} className="p-3 border-t border-border/50">
+            <form
+              onSubmit={sendMessage}
+              className="p-3 border-t border-border/50"
+            >
               <div className="flex gap-2">
                 <input
                   type="text"

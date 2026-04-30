@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { io, Socket } from "socket.io-client";
 import { Send } from "lucide-react";
 
-const SOCKET_URL = import.meta.env.VITE_CHAT_SERVER_URL || "http://localhost:3001";
+const SOCKET_URL =
+  import.meta.env.VITE_CHAT_SERVER_URL || "http://localhost:3001";
 
 interface Message {
   id: string;
@@ -42,31 +43,41 @@ const AdminChat = () => {
       setMessages(history);
     });
 
-    socket.on("chat:message", ({ visitorId, message }: { visitorId: string; message: Message }) => {
-      // Update conversation list
-      setConversations((prev) => {
-        const existing = prev.find((c) => c.visitorId === visitorId);
-        if (existing) {
-          return prev.map((c) =>
-            c.visitorId === visitorId
-              ? { ...c, lastMessage: message.text, messageCount: c.messageCount + 1 }
-              : c
-          );
-        }
-        return [...prev, { visitorId, lastMessage: message.text, messageCount: 1 }];
-      });
+    socket.on(
+      "chat:message",
+      ({ visitorId, message }: { visitorId: string; message: Message }) => {
+        // Update conversation list
+        setConversations((prev) => {
+          const existing = prev.find((c) => c.visitorId === visitorId);
+          if (existing) {
+            return prev.map((c) =>
+              c.visitorId === visitorId
+                ? {
+                    ...c,
+                    lastMessage: message.text,
+                    messageCount: c.messageCount + 1,
+                  }
+                : c,
+            );
+          }
+          return [
+            ...prev,
+            { visitorId, lastMessage: message.text, messageCount: 1 },
+          ];
+        });
 
-      // If this conversation is selected, add message
-      setSelectedVisitor((current) => {
-        if (current === visitorId) {
-          setMessages((prev) => {
-            if (prev.find((m) => m.id === message.id)) return prev;
-            return [...prev, message];
-          });
-        }
-        return current;
-      });
-    });
+        // If this conversation is selected, add message
+        setSelectedVisitor((current) => {
+          if (current === visitorId) {
+            setMessages((prev) => {
+              if (prev.find((m) => m.id === message.id)) return prev;
+              return [...prev, message];
+            });
+          }
+          return current;
+        });
+      },
+    );
 
     return () => {
       socket.disconnect();
@@ -100,7 +111,8 @@ const AdminChat = () => {
         <div className="p-4 border-b border-border/50">
           <h1 className="text-lg font-bold">Admin Chat</h1>
           <p className="text-xs text-muted-foreground mt-1">
-            {conversations.length} conversation{conversations.length !== 1 ? "s" : ""}
+            {conversations.length} conversation
+            {conversations.length !== 1 ? "s" : ""}
           </p>
         </div>
         <div className="flex-1 overflow-y-auto">
@@ -158,7 +170,10 @@ const AdminChat = () => {
               <div ref={messagesEndRef} />
             </div>
 
-            <form onSubmit={sendMessage} className="p-4 border-t border-border/50">
+            <form
+              onSubmit={sendMessage}
+              className="p-4 border-t border-border/50"
+            >
               <div className="flex gap-2">
                 <input
                   type="text"
