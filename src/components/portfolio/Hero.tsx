@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
-import heroOrb from "@/assets/hero-orb.jpg";
+import profile from "@/assets/profile.png";
 
 export const Hero = () => {
   return (
@@ -85,14 +85,19 @@ export const Hero = () => {
           <motion.div
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative aspect-square rounded-[2rem] overflow-hidden glow"
+            className="relative aspect-square rounded-[2rem] overflow-hidden glow bg-gradient-to-br from-primary/40 via-primary-glow/20 to-secondary"
           >
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{ background: "radial-gradient(circle at 50% 60%, hsl(250 90% 70% / 0.45), transparent 65%)" }}
+            />
             <img
-              src={heroOrb}
-              alt="Abstract indigo 3D render"
-              width={1280}
-              height={1280}
-              className="w-full h-full object-cover"
+              src={profile}
+              alt="Portrait of the developer"
+              width={1024}
+              height={1024}
+              className="relative w-full h-full object-cover object-top"
             />
           </motion.div>
         </motion.div>
