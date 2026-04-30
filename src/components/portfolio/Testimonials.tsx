@@ -4,15 +4,15 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Delivered our Shopify storefront on time, beautifully designed, and conversion-focused. Our sales jumped 38% in the first month.",
-    name: "Sarah Mitchell",
-    role: "Founder, Lumen Apparel",
+      "Built our multilingual site with great attention to detail and clear communication throughout. The end result exceeded our expectations.",
+    name: "BrainARC Team",
+    role: "Mental Health & Neurodiagnostic Practice",
   },
   {
     quote:
-      "A rare full-stack talent — clean code, sharp instincts, and zero hand-holding required. Will hire again without thinking.",
-    name: "David Okafor",
-    role: "CTO, Northwind SaaS",
+      "Professional, reliable, and creative. Delivered our corporate website with bilingual support and a clean modern design that perfectly represents our brand.",
+    name: "Panovi Team",
+    role: "Panovi, Workwear Manufacturer",
   },
 ];
 
@@ -26,9 +26,11 @@ export const Testimonials = () => {
         transition={{ duration: 0.6 }}
         className="max-w-2xl mb-14"
       >
-        <p className="text-sm uppercase tracking-[0.2em] text-primary-glow mb-3">Testimonials</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-primary-glow mb-3">
+          Testimonials
+        </p>
         <h2 className="text-4xl md:text-5xl font-bold">
-          Trusted by founders <span className="text-gradient">who ship</span>.
+          What <span className="text-gradient">clients say</span>.
         </h2>
       </motion.div>
 

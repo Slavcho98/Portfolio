@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, Briefcase } from "lucide-react";
 import profile from "@/assets/profile.png";
 
 export const Hero = () => {
@@ -18,7 +18,7 @@ export const Hero = () => {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs text-muted-foreground mb-6"
           >
-            <span className="size-2 rounded-full bg-primary-glow animate-pulse" />
+            <Briefcase className="size-3" />
             Available for new projects
           </motion.div>
 
@@ -26,10 +26,14 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6"
+            className="text-4xl md:text-5xl font-bold leading-[1.05] mb-6"
           >
-            Full‑stack developer<br />
-            crafting <span className="text-gradient">digital products</span> that ship.
+            Full‑stack developer
+            <br />
+            crafting <span className="text-gradient">
+              digital products
+            </span>{" "}
+            that ship.
           </motion.h1>
 
           <motion.p
@@ -70,8 +74,20 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-14 flex flex-wrap gap-x-10 gap-y-4 text-sm text-muted-foreground"
           >
-            {["React", "Next.js", "Node.js", "MongoDB", "Shopify", "WordPress"].map((t) => (
-              <span key={t} className="opacity-80">{t}</span>
+            {[
+              "React",
+              "Next.js",
+              "Node.js",
+              "MongoDB",
+              "Supabase",
+              "Firebase",
+              "Tailwind",
+              "Shopify",
+              "WordPress",
+            ].map((t) => (
+              <span key={t} className="opacity-80">
+                {t}
+              </span>
             ))}
           </motion.div>
         </div>
@@ -100,7 +116,10 @@ export const Hero = () => {
           <div
             aria-hidden
             className="absolute size-[380px] rounded-full blur-3xl opacity-60"
-            style={{ background: "radial-gradient(circle, hsl(243 75% 59% / 0.5), transparent 70%)" }}
+            style={{
+              background:
+                "radial-gradient(circle, hsl(243 75% 59% / 0.5), transparent 70%)",
+            }}
           />
 
           <motion.div
@@ -150,7 +169,12 @@ export const Hero = () => {
           </motion.div>
           <motion.div
             animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
             className="absolute -right-2 bottom-20 glass rounded-2xl px-4 py-2.5 text-sm font-medium shadow-lg"
           >
             <span className="text-gradient">🛍 Shopify</span>

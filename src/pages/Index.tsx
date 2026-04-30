@@ -4,6 +4,7 @@ import { Testimonials } from "@/components/portfolio/Testimonials";
 import { Projects } from "@/components/portfolio/Projects";
 import { Services } from "@/components/portfolio/Services";
 import { Contact } from "@/components/portfolio/Contact";
+import { ChatWidget } from "@/components/portfolio/ChatWidget";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <Projects />
       <Services />
       <Contact />
+      <ChatWidget />
     </main>
   );
 };

@@ -17,12 +17,15 @@ export const Navbar = () => {
     >
       <nav className="glass rounded-full px-6 py-3 flex items-center justify-between">
         <a href="#" className="font-semibold tracking-tight text-lg">
-          <span className="text-gradient">dev</span>.folio
+          <span className="text-gradient">Slavcho</span>
         </a>
         <ul className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="hover:text-foreground transition-colors">
+              <a
+                href={l.href}
+                className="hover:text-foreground transition-colors"
+              >
                 {l.label}
               </a>
             </li>

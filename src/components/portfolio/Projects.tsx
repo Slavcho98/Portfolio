@@ -1,38 +1,42 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import p1 from "@/assets/project-1.jpg";
-import p2 from "@/assets/project-2.jpg";
-import p3 from "@/assets/project-3.jpg";
-import p4 from "@/assets/project-4.jpg";
+import pDashboard from "@/assets/project-dashboard.png";
+import pBrainarc from "@/assets/project-brainarc.png";
+import pBankist from "@/assets/project-bankist.png";
+import pPanovi from "@/assets/project-panovi.png";
 
 const projects = [
   {
-    title: "Nova Analytics",
+    title: "Panovi",
+    tag: "Corporate Site",
+    desc: "Workwear manufacturer site with bilingual support and rich brand storytelling.",
+    img: pPanovi,
+    stack: ["Next.js", "Tailwind"],
+    href: "https://www.panovi.mk/",
+  },
+  {
+    title: "BrainARC",
+    tag: "React Website",
+    desc: "Multilingual consulting website for child & adolescent psychiatry.",
+    img: pBrainarc,
+    stack: ["React", "Tailwind CSS"],
+    href: "https://brainarc-skopje.mk/",
+  },
+  {
+    title: "The Wild Oasis",
     tag: "SaaS Dashboard",
-    desc: "Real-time analytics platform built with Next.js, Node.js & MongoDB.",
-    img: p1,
-    stack: ["Next.js", "Node", "MongoDB"],
+    desc: "Hotel management dashboard with bookings, sales analytics & occupancy tracking.",
+    img: pDashboard,
+    stack: ["React", "Styled Components", "Supabase"],
+    href: "https://sk-the-wild-oasis.netlify.app/login",
   },
   {
-    title: "Lumen Apparel",
-    tag: "Shopify Store",
-    desc: "Custom Shopify theme + headless storefront. +38% conversion lift.",
-    img: p2,
-    stack: ["Shopify", "Liquid", "React"],
-  },
-  {
-    title: "Vault Finance",
-    tag: "Mobile Web App",
-    desc: "Personal finance PWA with secure auth and beautiful motion design.",
-    img: p3,
-    stack: ["React", "Node", "Stripe"],
-  },
-  {
-    title: "Soverage Studio",
-    tag: "Agency Site",
-    desc: "Marketing site built in WordPress + Elementor with custom blocks.",
-    img: p4,
-    stack: ["WordPress", "Elementor"],
+    title: "Bankist",
+    tag: "Banking Web App",
+    desc: "Minimalist online banking experience with smooth interactions.",
+    img: pBankist,
+    stack: ["JavaScript", "HTML", "CSS"],
+    href: "https://cosmic-biscuit-8a6736.netlify.app/",
   },
 ];
 
@@ -47,13 +51,15 @@ export const Projects = () => {
         className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"
       >
         <div className="max-w-2xl">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary-glow mb-3">Selected Work</p>
+          <p className="text-sm uppercase tracking-[0.2em] text-primary-glow mb-3">
+            Selected Work
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Recent <span className="text-gradient">projects</span>.
+            Featured <span className="text-gradient">projects</span>.
           </h2>
         </div>
         <p className="text-muted-foreground max-w-sm">
-          A small selection of products I've designed, built and shipped recently.
+          A small selection of products I've designed, built and shipped.
         </p>
       </motion.div>
 
@@ -61,7 +67,9 @@ export const Projects = () => {
         {projects.map((p, i) => (
           <motion.a
             key={p.title}
-            href="#"
+            href={p.href}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -82,7 +90,9 @@ export const Projects = () => {
             <div className="p-6">
               <div className="flex items-start justify-between gap-4 mb-2">
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-primary-glow mb-1">{p.tag}</p>
+                  <p className="text-xs uppercase tracking-wider text-primary-glow mb-1">
+                    {p.tag}
+                  </p>
                   <h3 className="text-xl font-semibold">{p.title}</h3>
                 </div>
                 <ArrowUpRight className="size-5 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
@@ -90,7 +100,10 @@ export const Projects = () => {
               <p className="text-muted-foreground text-sm mb-4">{p.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {p.stack.map((s) => (
-                  <span key={s} className="text-xs px-2.5 py-1 rounded-full bg-secondary/70 text-muted-foreground">
+                  <span
+                    key={s}
+                    className="text-xs px-2.5 py-1 rounded-full bg-secondary/70 text-muted-foreground"
+                  >
                     {s}
                   </span>
                 ))}
