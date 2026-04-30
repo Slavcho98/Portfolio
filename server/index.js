@@ -6,6 +6,9 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 
+app.get("/", (req, res) => res.send("Chat server running"));
+app.get("/healthz", (req, res) => res.send("ok"));
+
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
@@ -119,6 +122,6 @@ function getConversationList() {
 }
 
 const PORT = process.env.PORT || 3001;
-httpServer.listen(PORT, () => {
-  console.log(`Chat server running on http://localhost:${PORT}`);
+httpServer.listen(PORT, "0.0.0.0", () => {
+  console.log(`Chat server running on port ${PORT}`);
 });
