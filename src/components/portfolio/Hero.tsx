@@ -80,17 +80,47 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative hidden lg:block"
+          className="relative hidden lg:flex justify-center items-center"
         >
+          {/* Decorative orbiting ring */}
           <motion.div
-            animate={{ y: [0, -20, 0] }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+            className="absolute size-[420px] rounded-full border border-primary/20"
+            style={{
+              background:
+                "conic-gradient(from 0deg, transparent 0deg, hsl(243 75% 59% / 0.6) 90deg, transparent 180deg, hsl(260 85% 65% / 0.4) 270deg, transparent 360deg)",
+              maskImage:
+                "radial-gradient(circle, transparent 58%, black 59%, black 60%, transparent 61%)",
+              WebkitMaskImage:
+                "radial-gradient(circle, transparent 58%, black 59%, black 60%, transparent 61%)",
+            }}
+          />
+          {/* Soft glow halo */}
+          <div
+            aria-hidden
+            className="absolute size-[380px] rounded-full blur-3xl opacity-60"
+            style={{ background: "radial-gradient(circle, hsl(243 75% 59% / 0.5), transparent 70%)" }}
+          />
+
+          <motion.div
+            animate={{ y: [0, -14, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative aspect-square rounded-[2rem] overflow-hidden glow bg-gradient-to-br from-primary/40 via-primary-glow/20 to-secondary"
+            className="relative w-[340px] h-[400px] rounded-[2rem] overflow-hidden glow"
+            style={{
+              background:
+                "linear-gradient(160deg, hsl(243 75% 59%) 0%, hsl(260 85% 50%) 50%, hsl(235 50% 14%) 100%)",
+              boxShadow:
+                "0 30px 80px -20px hsl(243 75% 30% / 0.6), inset 0 0 0 1px hsl(230 30% 96% / 0.08)",
+            }}
           >
             <div
               aria-hidden
               className="absolute inset-0"
-              style={{ background: "radial-gradient(circle at 50% 60%, hsl(250 90% 70% / 0.45), transparent 65%)" }}
+              style={{
+                background:
+                  "radial-gradient(circle at 50% 90%, hsl(250 90% 70% / 0.55), transparent 60%)",
+              }}
             />
             <img
               src={profile}
@@ -99,6 +129,31 @@ export const Hero = () => {
               height={1024}
               className="relative w-full h-full object-cover object-top"
             />
+            {/* Subtle bottom gradient for depth */}
+            <div
+              aria-hidden
+              className="absolute inset-x-0 bottom-0 h-24"
+              style={{
+                background:
+                  "linear-gradient(to top, hsl(240 60% 6% / 0.5), transparent)",
+              }}
+            />
+          </motion.div>
+
+          {/* Floating tag badges */}
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -left-2 top-16 glass rounded-2xl px-4 py-2.5 text-sm font-medium shadow-lg"
+          >
+            <span className="text-gradient">⚡ React</span>
+          </motion.div>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="absolute -right-2 bottom-20 glass rounded-2xl px-4 py-2.5 text-sm font-medium shadow-lg"
+          >
+            <span className="text-gradient">🛍 Shopify</span>
           </motion.div>
         </motion.div>
       </div>
