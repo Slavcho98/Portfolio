@@ -54,7 +54,7 @@ export const Projects = () => {
           <p className="text-sm uppercase tracking-[0.2em] text-primary-glow mb-3">
             Selected Work
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             Featured <span className="text-gradient">projects</span>.
           </h2>
         </div>

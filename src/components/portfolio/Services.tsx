@@ -42,7 +42,7 @@ export const Services = () => {
         <p className="text-sm uppercase tracking-[0.2em] text-primary-glow mb-3">
           Services
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold">
+        <h2 className="text-3xl md:text-5xl font-bold">
           What I can <span className="text-gradient">build for you</span>.
         </h2>
       </motion.div>

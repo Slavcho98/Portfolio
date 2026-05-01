@@ -29,7 +29,7 @@ export const Testimonials = () => {
         <p className="text-sm uppercase tracking-[0.2em] text-primary-glow mb-3">
           Testimonials
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold">
+        <h2 className="text-3xl md:text-5xl font-bold">
           What <span className="text-gradient">clients say</span>.
         </h2>
       </motion.div>
