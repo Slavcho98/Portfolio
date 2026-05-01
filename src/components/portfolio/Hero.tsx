@@ -46,11 +46,33 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-lg text-muted-foreground max-w-xl mb-10"
+            className="text-lg text-muted-foreground max-w-xl mb-6"
           >
-            I build fast, beautiful web apps and e‑commerce experiences with
-            React, Next.js, Node.js, MongoDB, Shopify and WordPress / Elementor.
+            I build fast, beautiful web apps that help brands grow and stand out
+            online. I help e‑commerce businesses increase conversions, fix slow
+            websites and turn visitors into customers.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex gap-8 mb-10"
+          >
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-gradient">2+</span>
+              <span className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
+                Experience
+              </span>
+            </div>
+            <div className="w-px bg-border/50" />
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-gradient">5+</span>
+              <span className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
+                Projects
+              </span>
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

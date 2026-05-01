@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Code2, ShoppingBag, Layout, Server, TrendingUp, Bot } from "lucide-react";
+import {
+  Code2,
+  ShoppingBag,
+  Layout,
+  Server,
+  TrendingUp,
+  Bot,
+} from "lucide-react";
 
 const services = [
   {
