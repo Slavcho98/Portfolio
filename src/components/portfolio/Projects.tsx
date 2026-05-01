@@ -4,6 +4,7 @@ import pDashboard from "@/assets/project-dashboard.png";
 import pBrainarc from "@/assets/project-brainarc.png";
 import pBankist from "@/assets/project-bankist.png";
 import pPanovi from "@/assets/project-panovi.png";
+import pSprouts from "@/assets/project-sprouts.jpg";
 
 const projects = [
   {
@@ -38,6 +39,14 @@ const projects = [
     stack: ["JavaScript", "HTML", "CSS"],
     href: "https://cosmic-biscuit-8a6736.netlify.app/",
   },
+  {
+    title: "Little Sprouts",
+    tag: "Kids Education",
+    desc: "Playful landing page for a children's learning center with activities and milestones.",
+    img: pSprouts,
+    stack: ["React", "Tailwind CSS"],
+    href: "https://little-young-sprouts.netlify.app/",
+  },
 ];
 
 export const Projects = () => {
@@ -63,7 +72,7 @@ export const Projects = () => {
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((p, i) => (
           <motion.a
             key={p.title}
@@ -73,7 +82,7 @@ export const Projects = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
+            transition={{ duration: 0.6, delay: (i % 3) * 0.1 }}
             whileHover={{ y: -6 }}
             className="group glass rounded-3xl overflow-hidden block"
           >

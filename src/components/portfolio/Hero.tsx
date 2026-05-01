@@ -62,7 +62,7 @@ export const Hero = () => {
             <div className="flex flex-col items-center">
               <span className="text-3xl font-bold text-gradient">2+</span>
               <span className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
-                Experience
+                Years Experience
               </span>
             </div>
             <div className="w-px bg-border/50" />
