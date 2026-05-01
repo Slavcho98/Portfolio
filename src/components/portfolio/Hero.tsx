@@ -22,9 +22,9 @@ export const Hero = () => {
               <Briefcase className="size-3" />
               Available for new projects
             </span>
-            <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs text-muted-foreground">
-              <BadgeCheck className="size-3" />
-              Certified Developer
+            <span className="inline-flex items-center gap-1.5 glass rounded-full px-4 py-1.5 text-xs font-medium">
+              <BadgeCheck className="size-3.5 text-primary-glow" />
+              <span className="text-gradient">Certified Developer</span>
             </span>
           </motion.div>
 
