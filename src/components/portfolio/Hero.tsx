@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Briefcase } from "lucide-react";
+import { ArrowRight, Mail, Briefcase, BadgeCheck } from "lucide-react";
 import profile from "@/assets/profile.png";
 
 export const Hero = () => {
@@ -16,10 +16,16 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs text-muted-foreground mb-6"
+            className="flex flex-wrap items-center gap-3 mb-6"
           >
-            <Briefcase className="size-3" />
-            Available for new projects
+            <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs text-muted-foreground">
+              <Briefcase className="size-3" />
+              Available for new projects
+            </span>
+            <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs text-muted-foreground">
+              <BadgeCheck className="size-3" />
+              Certified Developer
+            </span>
           </motion.div>
 
           <motion.h1
