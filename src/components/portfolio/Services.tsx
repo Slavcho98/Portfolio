@@ -27,7 +27,7 @@ const services = [
   {
     icon: Server,
     title: "APIs & Backend",
-    desc: "REST APIs, auth, Stripe and Solidgate integrations, payments and database modeling done right.",
+    desc: "REST APIs, auth, payment providers integration and database modeling done right.",
   },
   {
     icon: TrendingUp,
