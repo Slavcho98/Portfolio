@@ -32,7 +32,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold leading-[1.05] mb-6"
+            className="text-3xl md:text-5xl font-bold leading-[1.05] mb-6"
           >
             Full‑stack developer
             <br />
@@ -102,13 +102,13 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative hidden lg:flex justify-center items-center"
+          className="relative flex justify-center items-center mt-10 lg:mt-0"
         >
           {/* Decorative orbiting ring */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="absolute size-[420px] rounded-full border border-primary/20"
+            className="absolute size-[300px] md:size-[420px] rounded-full border border-primary/20"
             style={{
               background:
                 "conic-gradient(from 0deg, transparent 0deg, hsl(243 75% 59% / 0.6) 90deg, transparent 180deg, hsl(260 85% 65% / 0.4) 270deg, transparent 360deg)",
@@ -121,7 +121,7 @@ export const Hero = () => {
           {/* Soft glow halo */}
           <div
             aria-hidden
-            className="absolute size-[380px] rounded-full blur-3xl opacity-60"
+            className="absolute size-[260px] md:size-[380px] rounded-full blur-3xl opacity-60"
             style={{
               background:
                 "radial-gradient(circle, hsl(243 75% 59% / 0.5), transparent 70%)",
@@ -131,7 +131,7 @@ export const Hero = () => {
           <motion.div
             animate={{ y: [0, -14, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative w-[340px] h-[400px] rounded-[2rem] overflow-hidden glow"
+            className="relative w-[240px] h-[300px] md:w-[340px] md:h-[400px] rounded-[2rem] overflow-hidden glow"
             style={{
               background:
                 "linear-gradient(160deg, hsl(243 75% 59%) 0%, hsl(260 85% 50%) 50%, hsl(235 50% 14%) 100%)",

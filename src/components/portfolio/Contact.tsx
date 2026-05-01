@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-28 container mx-auto">
+    <section id="contact" className="py-16 md:py-28 container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

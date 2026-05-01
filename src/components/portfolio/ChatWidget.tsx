@@ -17,6 +17,7 @@ export const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
+  const [unread, setUnread] = useState(0);
   const [visitorId] = useState(() => {
     const stored = sessionStorage.getItem("chat-visitor-id");
     if (stored) return stored;
@@ -47,6 +48,13 @@ export const ChatWidget = () => {
           if (prev.find((m) => m.id === message.id)) return prev;
           return [...prev, message];
         });
+        // Show unread badge if chat is closed and message is from admin
+        if (message.sender === "admin") {
+          setIsOpen((open) => {
+            if (!open) setUnread((n) => n + 1);
+            return open;
+          });
+        }
       },
     );
 
@@ -56,7 +64,10 @@ export const ChatWidget = () => {
   }, [visitorId]);
 
   useEffect(() => {
-    const handleOpenChat = () => setIsOpen(true);
+    const handleOpenChat = () => {
+      setIsOpen(true);
+      setUnread(0);
+    };
     window.addEventListener("open-chat", handleOpenChat);
     return () => window.removeEventListener("open-chat", handleOpenChat);
   }, []);
@@ -85,10 +96,15 @@ export const ChatWidget = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
-            onClick={() => setIsOpen(true)}
+            onClick={() => { setIsOpen(true); setUnread(0); }}
             className="fixed bottom-6 right-6 z-50 size-14 rounded-full bg-gradient-primary flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity"
           >
             <MessageCircle className="size-6 text-white" />
+            {unread > 0 && (
+              <span className="absolute -top-1 -right-1 size-5 rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center animate-pulse">
+                {unread}
+              </span>
+            )}
           </motion.button>
         )}
       </AnimatePresence>

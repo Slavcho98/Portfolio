@@ -42,7 +42,7 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-28 container mx-auto">
+    <section id="projects" className="py-16 md:py-28 container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -18,7 +18,7 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-28 container mx-auto">
+    <section id="testimonials" className="py-16 md:py-28 container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export const Testimonials = () => {
               "{t.quote}"
             </blockquote>
             <figcaption className="flex items-center gap-3">
-              <div className="size-10 rounded-full bg-gradient-primary flex items-center justify-center font-semibold">
+              <div className="size-10 aspect-square rounded-full bg-gradient-primary flex items-center justify-center font-semibold shrink-0">
                 {t.name[0]}
               </div>
               <div>
