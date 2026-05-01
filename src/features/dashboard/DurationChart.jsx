@@ -26,6 +26,14 @@ const ChartBox = styled.div`
   & .recharts-pie-label-text {
     font-weight: 600;
   }
+
+  @media (max-width: 1024px) {
+    grid-column: 1 / -1;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.6rem;
+  }
 `;
 
 const startDataLight = [
@@ -151,16 +159,16 @@ function DurationChart({ confirmedStays = [] }) {
       <Heading as="h2" type="h2">
         Stay duration summary
       </Heading>
-      <ResponsiveContainer width="100%" height={240}>
-        <PieChart>
+      <ResponsiveContainer width="100%" height={300}>
+        <PieChart margin={{ top: 20, bottom: 20 }}>
           <Pie
             data={data}
             nameKey="duration"
             dataKey="value"
             innerRadius={85}
             outerRadius={110}
-            cx="40%"
-            cy="50%"
+            cx="50%"
+            cy="45%"
             paddingAngle={3}
           >
             {data.map((entry) => (
@@ -173,11 +181,10 @@ function DurationChart({ confirmedStays = [] }) {
           </Pie>
           <Tooltip />
           <Legend
-            verticalAlign="middle"
-            align="right"
-            width="30%"
-            layout="vertical"
-            iconType="circles"
+            verticalAlign="bottom"
+            align="center"
+            layout="horizontal"
+            iconType="circle"
           />
         </PieChart>
       </ResponsiveContainer>

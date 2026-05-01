@@ -49,10 +49,31 @@ const Header = styled.header`
     font-size: 2rem;
     margin-left: 4px;
   }
+
+  @media (max-width: 768px) {
+    padding: 1.6rem 2rem;
+    font-size: 1.4rem;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+
+    & div:first-child {
+      font-size: 1.4rem;
+      gap: 0.8rem;
+    }
+
+    & span {
+      font-size: 1.6rem;
+    }
+  }
 `;
 
 const Section = styled.section`
   padding: 3.2rem 4rem 1.2rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.6rem 1.2rem;
+  }
 `;
 
 const Guest = styled.div`
@@ -75,6 +96,12 @@ const Price = styled.div`
   padding: 1.6rem 3.2rem;
   border-radius: var(--border-radius-sm);
   margin-top: 2.4rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  @media (max-width: 768px) {
+    padding: 1.2rem 1.6rem;
+  }
 
   background-color: ${(props) =>
     props.isPaid ? "var(--color-green-100)" : "var(--color-yellow-100)"};
@@ -99,6 +126,10 @@ const Footer = styled.footer`
   font-size: 1.2rem;
   color: var(--color-grey-500);
   text-align: right;
+
+  @media (max-width: 768px) {
+    padding: 1.2rem 1.6rem;
+  }
 `;
 
 // A purely presentational component
