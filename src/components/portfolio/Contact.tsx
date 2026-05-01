@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Contact = () => {
@@ -22,21 +22,28 @@ export const Contact = () => {
         </p>
         <h2 className="text-4xl md:text-6xl font-bold max-w-3xl mx-auto mb-6">
           Have a project in mind?{" "}
-          <span className="text-gradient">Let's build it.</span>
+          <span className="text-gradient">Let's talk.</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mb-10">
-          Drop me a line and I'll get back within 24 hours. Free 30-minute
-          discovery call included.
+          Send me a message via the chat widget or drop me an email. I'll get
+          back within 24 hours.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:slavcho.karamfiloski@gmail.com"
             className="group inline-flex items-center gap-2 bg-gradient-primary px-7 py-4 rounded-full font-medium hover:opacity-90 transition-all glow"
           >
             <Mail className="size-4" />
-            hello@example.com
+            Email me
             <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
           </a>
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent("open-chat"))}
+            className="group inline-flex items-center gap-2 border border-border px-7 py-4 rounded-full font-medium hover:bg-secondary/50 transition-all"
+          >
+            <MessageCircle className="size-4" />
+            Chat with me
+          </button>
         </div>
       </motion.div>
 

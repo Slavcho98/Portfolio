@@ -143,8 +143,11 @@ httpServer.listen(PORT, "0.0.0.0", () => {
 
   // Self-ping every 14 minutes to prevent Render free tier from sleeping
   if (process.env.RENDER_EXTERNAL_URL) {
-    setInterval(() => {
-      fetch(`${process.env.RENDER_EXTERNAL_URL}/healthz`).catch(() => {});
-    }, 14 * 60 * 1000);
+    setInterval(
+      () => {
+        fetch(`${process.env.RENDER_EXTERNAL_URL}/healthz`).catch(() => {});
+      },
+      14 * 60 * 1000,
+    );
   }
 });

@@ -56,6 +56,12 @@ export const ChatWidget = () => {
   }, [visitorId]);
 
   useEffect(() => {
+    const handleOpenChat = () => setIsOpen(true);
+    window.addEventListener("open-chat", handleOpenChat);
+    return () => window.removeEventListener("open-chat", handleOpenChat);
+  }, []);
+
+  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
