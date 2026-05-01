@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, ShoppingBag, Layout, Server, TrendingUp } from "lucide-react";
+import { Code2, ShoppingBag, Layout, Server, TrendingUp, Bot } from "lucide-react";
 
 const services = [
   {
@@ -26,6 +26,11 @@ const services = [
     icon: TrendingUp,
     title: "Performance Marketing",
     desc: "Google Ads, Meta and LinkedIn Ads, conversion tracking and analytics to grow and measure what matters.",
+  },
+  {
+    icon: Bot,
+    title: "AI Automation",
+    desc: "Custom AI chatbots, workflow automation with GPT APIs, intelligent lead capture and automated content generation to save time and scale faster.",
   },
 ];
 
@@ -56,7 +61,7 @@ export const Services = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
             whileHover={{ y: -4 }}
-            className={`glass rounded-3xl p-6 group${i === 3 ? " lg:col-start-1" : ""}${i === 4 ? " lg:col-start-2" : ""}`}
+            className="glass rounded-3xl p-6 group"
           >
             <div className="size-12 rounded-2xl bg-gradient-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
               <s.icon className="size-6" />

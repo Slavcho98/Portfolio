@@ -28,7 +28,7 @@ const projects = [
     desc: "Hotel management dashboard with bookings, sales analytics & occupancy tracking.",
     img: pDashboard,
     stack: ["React", "Styled Components", "Supabase"],
-    href: "https://sk-the-wild-oasis.netlify.app/login",
+    href: "https://wildoasisbooking.netlify.app/login",
   },
   {
     title: "Bankist",
