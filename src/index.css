@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Playful, colorful design system for a children's learning & activities site.
+   All colors are HSL. */
+
+@layer base {
+  :root {
+    --background: 45 60% 97%;
+    --foreground: 240 30% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 30% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 30% 20%;
+
+    /* Coral pink — primary playful brand */
+    --primary: 8 90% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Mint green */
+    --secondary: 158 65% 70%;
+    --secondary-foreground: 158 50% 18%;
+
+    /* Sky blue */
+    --accent: 200 90% 75%;
+    --accent-foreground: 210 60% 18%;
+
+    /* Sunshine yellow */
+    --sunshine: 45 100% 68%;
+    --sunshine-foreground: 30 50% 18%;
+
+    /* Lavender */
+    --lavender: 265 75% 80%;
+    --lavender-foreground: 265 50% 20%;
+
+    --muted: 45 30% 93%;
+    --muted-foreground: 240 10% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 20% 90%;
+    --input: 240 20% 90%;
+    --ring: 8 90% 67%;
+
+    --radius: 1.25rem;
+
+    /* Gradients */
+    --gradient-sky: linear-gradient(180deg, hsl(200 100% 92%) 0%, hsl(45 100% 95%) 100%);
+    --gradient-rainbow: linear-gradient(
+      90deg,
+      hsl(8 90% 67%) 0%,
+      hsl(45 100% 68%) 25%,
+      hsl(158 65% 60%) 50%,
+      hsl(200 90% 70%) 75%,
+      hsl(265 75% 75%) 100%
+    );
+    --gradient-warm: linear-gradient(135deg, hsl(8 90% 67%) 0%, hsl(45 100% 68%) 100%);
+    --gradient-cool: linear-gradient(135deg, hsl(200 90% 75%) 0%, hsl(265 75% 80%) 100%);
+    --gradient-fresh: linear-gradient(135deg, hsl(158 65% 70%) 0%, hsl(200 90% 75%) 100%);
+
+    /* Shadows — soft, candy-like */
+    --shadow-soft: 0 10px 30px -10px hsl(8 60% 50% / 0.18);
+    --shadow-pop: 0 16px 40px -12px hsl(265 60% 50% / 0.25);
+    --shadow-card: 0 4px 0 0 hsl(240 30% 20% / 0.08), 0 12px 24px -8px hsl(240 30% 20% / 0.12);
+
+    --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-smooth: all 0.3s ease;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-sky { background: var(--gradient-sky); }
+  .bg-gradient-rainbow { background: var(--gradient-rainbow); }
+  .bg-gradient-warm { background: var(--gradient-warm); }
+  .bg-gradient-cool { background: var(--gradient-cool); }
+  .bg-gradient-fresh { background: var(--gradient-fresh); }
+
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-pop { box-shadow: var(--shadow-pop); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+
+  .transition-bounce { transition: var(--transition-bounce); }
+  .transition-smooth { transition: var(--transition-smooth); }
+}
+
+/* Playful animations */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(3deg); }
+}
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-12px) rotate(4deg); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.7) translateY(20px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-float-fast { animation: float-fast 4s ease-in-out infinite; }
+.animate-wiggle { animation: wiggle 2s ease-in-out infinite; }
+.animate-pop-in { animation: pop-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animate-fade-up { animation: fade-up 0.7s ease-out both; }
