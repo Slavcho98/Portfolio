@@ -66,6 +66,7 @@ export const BookingForm = ({ barber, service, onComplete }: Props) => {
   const [date, setDate] = useState<Date | undefined>();
   const [time, setTime] = useState<string | undefined>();
   const [timeModalOpen, setTimeModalOpen] = useState(false);
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -76,7 +77,12 @@ export const BookingForm = ({ barber, service, onComplete }: Props) => {
     }
     if (!date) return toast.error("Please select a date");
     if (!time) return toast.error("Please select a time slot");
+    setConfirmOpen(true);
+  };
 
+  const handleConfirm = () => {
+    if (!date || !time) return;
+    setConfirmOpen(false);
     onComplete({ customer: { firstName, lastName, phone, email }, date, time });
   };
 
@@ -238,13 +244,11 @@ export const BookingForm = ({ barber, service, onComplete }: Props) => {
           <Dialog open={timeModalOpen} onOpenChange={setTimeModalOpen}>
             <DialogContent className="rounded-sm border border-border bg-card shadow-card w-[calc(100%-2rem)] sm:max-w-md px-6 pt-10 pb-6">
               <DialogHeader>
-                <DialogTitle className="font-display tracking-wider leading-snug">
-                  <span className="block text-xs tracking-[0.3em] text-primary">
-                    AVAILABLE TIMES
-                  </span>
-                  <span className="block text-base mt-0.5 text-foreground">
-                    {date ? format(date, "EEE, MMM do") : ""}
-                  </span>
+                <p className="font-display text-xs tracking-[0.3em] text-primary">
+                  AVAILABLE TIMES
+                </p>
+                <DialogTitle className="font-display text-base tracking-wider text-foreground mt-0.5">
+                  {date ? format(date, "EEE, MMM do") : ""}
                 </DialogTitle>
               </DialogHeader>
               <div className="grid grid-cols-3 gap-2.5 sm:gap-3 pt-2">
@@ -266,6 +270,58 @@ export const BookingForm = ({ barber, service, onComplete }: Props) => {
                     {t}
                   </button>
                 ))}
+              </div>
+            </DialogContent>
+          </Dialog>
+
+          {/* Booking confirmation modal */}
+          <Dialog open={confirmOpen} onOpenChange={setConfirmOpen}>
+            <DialogContent className="rounded-sm border border-border bg-card shadow-card w-[calc(100%-2rem)] sm:max-w-sm px-6 pt-10 pb-6">
+              <DialogHeader>
+                <p className="font-display text-xs tracking-[0.3em] text-primary">
+                  REVIEW YOUR BOOKING
+                </p>
+                <DialogTitle className="font-display text-lg tracking-wider text-foreground mt-0.5">
+                  Does everything look right?
+                </DialogTitle>
+              </DialogHeader>
+              <div className="mt-2 space-y-0 divide-y divide-border">
+                <ConfirmRow label="Barber" value={barber.name} />
+                <ConfirmRow label="Service" value={service.name} />
+                <ConfirmRow label="Duration" value={service.duration} />
+                <ConfirmRow
+                  label="Date"
+                  value={date ? format(date, "EEE, MMM d, yyyy") : ""}
+                />
+                <ConfirmRow label="Time" value={time ?? ""} />
+                <ConfirmRow label="Name" value={`${firstName} ${lastName}`} />
+                <ConfirmRow label="Phone" value={phone} />
+                <ConfirmRow label="Email" value={email} />
+                <div className="flex items-end justify-between pt-4">
+                  <span className="font-display tracking-widest text-muted-foreground text-xs">
+                    TOTAL
+                  </span>
+                  <span className="font-display text-2xl text-gradient">
+                    {service.price}
+                  </span>
+                </div>
+              </div>
+              <div className="mt-5 flex gap-3">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="flex-1 rounded-sm font-display tracking-[0.2em]"
+                  onClick={() => setConfirmOpen(false)}
+                >
+                  EDIT
+                </Button>
+                <Button
+                  type="button"
+                  className="flex-1 rounded-sm bg-gradient-primary font-display tracking-[0.2em] text-primary-foreground shadow-elegant hover:shadow-glow transition-smooth"
+                  onClick={handleConfirm}
+                >
+                  BOOK NOW
+                </Button>
               </div>
             </DialogContent>
           </Dialog>
@@ -359,5 +415,16 @@ const Summary = ({ label, value }: { label: string; value: string }) => (
       {label}
     </span>
     <span className="font-display text-lg text-foreground">{value}</span>
+  </div>
+);
+
+const ConfirmRow = ({ label, value }: { label: string; value: string }) => (
+  <div className="flex items-center justify-between gap-4 py-2.5">
+    <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+      {label}
+    </span>
+    <span className="font-display text-sm text-foreground text-right max-w-[55%] truncate">
+      {value}
+    </span>
   </div>
 );
