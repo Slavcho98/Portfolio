@@ -14,6 +14,12 @@ import {
 } from "@/components/ui/popover";
 import { toast } from "sonner";
 import { Barber, Service } from "@/types/booking";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 type Props = {
   barber: Barber;
@@ -59,6 +65,7 @@ export const BookingForm = ({ barber, service, onComplete }: Props) => {
   const [email, setEmail] = useState("");
   const [date, setDate] = useState<Date | undefined>();
   const [time, setTime] = useState<string | undefined>();
+  const [timeModalOpen, setTimeModalOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,7 +81,7 @@ export const BookingForm = ({ barber, service, onComplete }: Props) => {
   };
 
   return (
-    <section className="container pb-28 pt-6 sm:pb-16 sm:pt-12 md:py-16">
+    <section className="container pb-10 pt-6 sm:pb-16 sm:pt-12 md:py-16">
       {/* Mobile booking summary bar */}
       <div className="mb-6 flex items-center justify-between gap-3 rounded-sm border border-border bg-card p-4 shadow-card lg:hidden animate-fade-up">
         <div className="min-w-0">
@@ -145,58 +152,110 @@ export const BookingForm = ({ barber, service, onComplete }: Props) => {
             <h2 className="font-display text-xl tracking-wider sm:text-2xl">
               Pick a Date
             </h2>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  type="button"
-                  variant="outline"
-                  className={cn(
-                    "h-14 w-full justify-start gap-3 rounded-sm border-border bg-input text-left text-sm font-normal hover:bg-secondary sm:text-base",
-                    !date && "text-muted-foreground",
-                  )}
+
+            <div className="rounded-sm border border-border bg-card p-6 sm:hidden">
+              <Calendar
+                mode="single"
+                selected={date}
+                onSelect={(d) => {
+                  setDate(d);
+                  setTime(undefined);
+                  if (d) setTimeModalOpen(true);
+                }}
+                disabled={(d) =>
+                  d < new Date(new Date().setHours(0, 0, 0, 0)) ||
+                  d.getDay() === 0
+                }
+                className="p-3"
+              />
+            </div>
+
+            {/* Desktop: popover calendar */}
+            <div className="hidden sm:block">
+              <Popover modal={true}>
+                <PopoverTrigger asChild>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className={cn(
+                      "relative h-14 w-full justify-start gap-3 rounded-sm border-2 border-primary/40 bg-secondary text-left text-sm font-normal hover:bg-secondary/80 sm:text-base",
+                      !date && "text-muted-foreground",
+                    )}
+                  >
+                    <CalendarIcon className="h-4 w-4 shrink-0" />
+                    <span className="truncate">
+                      {date
+                        ? format(date, "EEE, MMM do, yyyy")
+                        : "Choose a day"}
+                    </span>
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent
+                  className="z-[60] w-[calc(100vw-2rem)] max-w-sm p-0 border border-border bg-card shadow-card sm:w-auto"
+                  align="start"
+                  side="bottom"
+                  sideOffset={8}
+                  collisionPadding={16}
                 >
-                  <CalendarIcon className="h-4 w-4 shrink-0" />
-                  <span className="truncate">
-                    {date ? format(date, "EEE, MMM do, yyyy") : "Choose a day"}
-                  </span>
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent
-                className="z-[60] w-[calc(100vw-2rem)] max-w-sm p-0 border border-border bg-card shadow-card sm:w-auto"
-                align="start"
-                side="bottom"
-                sideOffset={8}
-                collisionPadding={16}
-              >
-                <Calendar
-                  mode="single"
-                  selected={date}
-                  onSelect={(d) => {
-                    setDate(d);
-                    setTime(undefined);
-                  }}
-                  disabled={(d) =>
-                    d < new Date(new Date().setHours(0, 0, 0, 0)) ||
-                    d.getDay() === 0
-                  }
-                  initialFocus
-                  className={cn("p-3 pointer-events-auto")}
-                />
-              </PopoverContent>
-            </Popover>
+                  <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={(d) => {
+                      setDate(d);
+                      setTime(undefined);
+                      if (d) setTimeModalOpen(true);
+                    }}
+                    disabled={(d) =>
+                      d < new Date(new Date().setHours(0, 0, 0, 0)) ||
+                      d.getDay() === 0
+                    }
+                    initialFocus
+                    className={cn("p-3 pointer-events-auto")}
+                  />
+                </PopoverContent>
+              </Popover>
+            </div>
           </div>
 
-          {date && (
-            <div className="space-y-4 animate-fade-in">
-              <h2 className="font-display text-xl tracking-wider sm:text-2xl">
-                Available Times
-              </h2>
-              <div className="grid grid-cols-3 gap-2.5 sm:gap-3 md:grid-cols-4">
+          {date && time && (
+            <div className="animate-fade-in">
+              <button
+                type="button"
+                onClick={() => setTimeModalOpen(true)}
+                className="flex items-center gap-3 rounded-sm border-2 border-primary/40 bg-secondary px-4 py-3 font-display text-base tracking-widest text-foreground transition-smooth hover:border-primary/70 hover:bg-secondary/80"
+              >
+                <span className="text-muted-foreground text-xs tracking-[0.3em]">
+                  TIME
+                </span>
+                <span>{time}</span>
+                <span className="ml-2 text-xs text-primary underline underline-offset-2">
+                  change
+                </span>
+              </button>
+            </div>
+          )}
+
+          <Dialog open={timeModalOpen} onOpenChange={setTimeModalOpen}>
+            <DialogContent className="rounded-sm border border-border bg-card shadow-card w-[calc(100%-2rem)] sm:max-w-md px-6 pt-10 pb-6">
+              <DialogHeader>
+                <DialogTitle className="font-display tracking-wider leading-snug">
+                  <span className="block text-xs tracking-[0.3em] text-primary">
+                    AVAILABLE TIMES
+                  </span>
+                  <span className="block text-base mt-0.5 text-foreground">
+                    {date ? format(date, "EEE, MMM do") : ""}
+                  </span>
+                </DialogTitle>
+              </DialogHeader>
+              <div className="grid grid-cols-3 gap-2.5 sm:gap-3 pt-2">
                 {TIME_SLOTS.map((t) => (
                   <button
                     key={t}
                     type="button"
-                    onClick={() => setTime(t)}
+                    onClick={() => {
+                      setTime(t);
+                      setTimeModalOpen(false);
+                    }}
                     className={cn(
                       "h-12 rounded-sm border font-display text-base tracking-widest transition-smooth sm:text-lg",
                       time === t
@@ -208,8 +267,8 @@ export const BookingForm = ({ barber, service, onComplete }: Props) => {
                   </button>
                 ))}
               </div>
-            </div>
-          )}
+            </DialogContent>
+          </Dialog>
 
           {/* Desktop submit button */}
           <Button
