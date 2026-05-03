@@ -1,0 +1,19 @@
+{
+  "name": "North & Blade Barbershop",
+  "short_name": "N&Blade",
+  "description": "Book your next cut with North & Blade in seconds.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a1a",
+  "theme_color": "#0a0a1a",
+  "icons": [
+    {
+      "src": "/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
