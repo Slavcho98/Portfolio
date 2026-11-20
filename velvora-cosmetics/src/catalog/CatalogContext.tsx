@@ -13,7 +13,8 @@ type CatalogContextValue = {
 const CatalogContext = createContext<CatalogContextValue | null>(null)
 
 async function fetchCatalog(signal: AbortSignal): Promise<Product[]> {
-  const res = await fetch('/api/products?limit=200', { signal })
+  const baseUrl = import.meta.env.VITE_API_URL ?? '/api'
+  const res = await fetch(`${baseUrl}/products?limit=200`, { signal })
   if (!res.ok) throw new Error(`The product API responded with ${res.status}`)
   const data = (await res.json()) as { items: Product[] }
   return data.items
