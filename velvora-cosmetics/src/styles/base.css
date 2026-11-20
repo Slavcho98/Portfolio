@@ -111,9 +111,9 @@ h2 em, h1 em { font-style: italic; color: var(--rose-deep); }
 .nav ul { display: flex; gap: 4px; }
 .nav a { display: block; padding: 9px 16px; border-radius: 999px; font-size: 16px; font-weight: 500; transition: background .2s; }
 
-.header--scrolled .logo { font-size: 52px; }
-.header--scrolled .nav a { font-size: 24px; }
-.header--scrolled .icon-btn { width: 48px; height: 48px; }
+.header--scrolled .logo { font-size: 20px; }
+.header--scrolled .nav a { font-size: 14px; }
+.header--scrolled .icon-btn { width: 40px; height: 40px; }
 .nav a:hover { background: rgba(23, 18, 28, .06); }
 .header__icons { display: flex; align-items: center; gap: 4px; }
 .header__burger { display: none; }
