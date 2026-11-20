@@ -1,0 +1,21 @@
+{
+  "name": "velvora-server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "MongoDB layer for the Velvora storefront: product model, seed and connection check.",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "ping": "node src/ping.js",
+    "seed": "node src/seed.js",
+    "seed:fresh": "node src/seed.js --fresh"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "mongoose": "^9.12.2"
+  }
+}

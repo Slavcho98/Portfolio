@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700&display=swap');
+
+@import './styles/base.css';
+@import './styles/card.css';
+@import './styles/home.css';
+@import './styles/cart.css';
+@import './styles/drawer.css';
+@import './styles/sheet.css';
+@import './styles/shop.css';
+@import './styles/filters.css';
+@import './styles/product.css';
+@import './styles/responsive.css';

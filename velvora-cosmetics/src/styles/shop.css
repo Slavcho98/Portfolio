@@ -1,0 +1,51 @@
+/* Product image placeholder (shown until real photos exist under public/products) */
+.ph { position: relative; display: grid; place-items: center; overflow: hidden; color: rgba(23, 18, 28, .55); text-align: center; }
+.ph--skincare { --art-glass: #bcd6c5; --art-liquid: #8fbfa3; --art-cap: #23332b; --art-metal: #d8c9a0; --art-ink: #23332b; --art-a: #b7d4c3; --art-b: #e3efe7; background: radial-gradient(120% 90% at 50% 15%, #f6faf7, #d3e5da 75%); }
+.ph--lips { --art-glass: #f1c0cd; --art-liquid: #c9455f; --art-cap: #3a1f2b; --art-metal: #d9b98a; --art-ink: #3a1f2b; --art-a: #e6798e; --art-b: #f5b6c3; background: radial-gradient(120% 90% at 50% 15%, #fdeef1, #f5c3cf 75%); }
+.ph--hair { --art-glass: #ecd7b6; --art-liquid: #d3a665; --art-cap: #3b2a1a; --art-metal: #cdb48a; --art-ink: #3b2a1a; --art-a: #d9b27a; --art-b: #efd9b4; background: radial-gradient(120% 90% at 50% 15%, #fbf3e6, #e8d0aa 75%); }
+.ph--eye { --art-glass: #cdc5ea; --art-liquid: #5b4b8f; --art-cap: #1d1524; --art-metal: #b9b2d6; --art-ink: #1d1524; --art-a: #7d6bb5; --art-b: #b9afdf; background: radial-gradient(120% 90% at 50% 15%, #f1eefb, #d3cced 75%); }
+.ph--makeup { --art-glass: #f1c5b1; --art-liquid: #e59a80; --art-cap: #3b221b; --art-metal: #d9b89a; --art-ink: #3b221b; --art-a: #c86f5d; --art-b: #f1c7a8; background: radial-gradient(120% 90% at 50% 15%, #fdf1ea, #f3cdb9 75%); }
+.ph--fragrance { --art-glass: #dcc3e2; --art-liquid: #b583c4; --art-cap: #2a1b33; --art-metal: #d6c08a; --art-ink: #2a1b33; --art-a: #a46fb3; --art-b: #d7b9e0; background: radial-gradient(120% 90% at 50% 15%, #f7edf8, #dfc7e5 75%); }
+.ph::before { content: ''; position: absolute; width: 90%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, .75), rgba(255, 255, 255, 0) 68%); }
+.ph__art { position: relative; width: 74%; height: auto; overflow: visible; filter: drop-shadow(0 18px 22px rgba(23, 18, 28, .12)); }
+.ph__shadow { fill: rgba(23, 18, 28, .2); filter: blur(3px); }
+.ph__icon { position: relative; width: 34%; height: 34%; opacity: .5; stroke-width: 1.4; }
+.ph__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s ease; }
+.ph__img.is-loaded { opacity: 1; }
+/* Hover state on cards: a second photo fades in, or a texture swatch when there isn't one yet. */
+.ph__img--alt.is-loaded { opacity: 0; }
+.card:hover .ph__img--alt.is-loaded, .card:focus-within .ph__img--alt.is-loaded { opacity: 1; }
+.ph__texture { position: absolute; inset: 0; opacity: 0; transition: opacity .45s ease; pointer-events: none; background: inherit; }
+.ph__texture i { position: absolute; background: linear-gradient(100deg, color-mix(in srgb, var(--art-liquid) 65%, #fff), var(--art-liquid) 48%, color-mix(in srgb, var(--art-liquid) 82%, #000)); box-shadow: inset 0 7px 12px rgba(255, 255, 255, .5), inset 0 -6px 10px rgba(0, 0, 0, .12), 0 14px 22px -10px rgba(23, 18, 28, .4); }
+.ph__texture i:first-child { left: 12%; top: 34%; width: 76%; height: 22%; border-radius: 55% 45% 60% 40% / 60% 55% 45% 40%; transform: rotate(-11deg) scaleX(0); transform-origin: left center; transition: transform .7s cubic-bezier(.2, .7, .2, 1) .05s; }
+.ph__texture i:nth-child(2) { left: 52%; top: 58%; width: 26%; aspect-ratio: 1; border-radius: 50%; transform: scale(0); transition: transform .5s cubic-bezier(.3, 1.4, .5, 1) .3s; }
+.ph__texture em { position: absolute; left: 14px; bottom: 14px; padding: 6px 12px; border-radius: 999px; background: rgba(255, 255, 255, .82); backdrop-filter: blur(8px); font-size: 11px; font-style: normal; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); }
+.card:hover .ph__texture, .card:focus-within .ph__texture { opacity: 1; }
+.card:hover .ph__texture i:first-child, .card:focus-within .ph__texture i:first-child { transform: rotate(-11deg) scaleX(1); }
+.card:hover .ph__texture i:nth-child(2), .card:focus-within .ph__texture i:nth-child(2) { transform: scale(1); }
+@media (hover: none) { .ph__texture { display: none; } }
+.ph--compact::before { width: 80%; }
+.ph--compact .ph__icon { width: 44%; height: 44%; }
+.sheet__thumb { display: contents; }
+
+/* Skeletons */
+.card--skeleton { pointer-events: none; }
+.skeleton { background: linear-gradient(100deg, var(--sand) 30%, #f7f2ee 50%, var(--sand) 70%) 0 0 / 200% 100%; animation: shimmer 1.4s infinite; border-radius: 12px; }
+.skeleton--img { aspect-ratio: 4 / 5; border-radius: 26px; }
+.skeleton--line { height: 14px; margin-top: 10px; }
+.skeleton--w60 { width: 60%; }
+.skeleton--w40 { width: 40%; }
+
+/* Load more */
+.loadmore { display: flex; flex-direction: column; align-items: center; gap: 14px; margin: 56px auto 0; max-width: 360px; text-align: center; }
+.loadmore p { margin: 0; font-size: 14px; color: var(--muted); }
+.loadmore p b { color: var(--ink); font-weight: 600; }
+.loadmore__bar { width: 100%; height: 4px; overflow: hidden; border-radius: 99px; background: var(--sand); }
+.loadmore__bar i { display: block; height: 100%; border-radius: inherit; background: var(--ink); }
+.loadmore .btn { margin-top: 6px; min-width: 220px; justify-content: center; }
+.grid__error { grid-column: 1 / -1; padding: 32px; border-radius: 24px; background: var(--paper); text-align: center; color: var(--muted); }
+.grid__error code, .shop-state code { padding: 2px 8px; border-radius: 8px; background: var(--sand); font-size: .9em; color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton { animation: none; }
+}
