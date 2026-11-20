@@ -5,6 +5,7 @@ import pBankist from "@/assets/project-bankist.png";
 import pPanovi from "@/assets/project-panovi.png";
 import pSprouts from "@/assets/project-sprouts.jpg";
 import pVelvora from "@/assets/project-velvora.png";
+import pTradingLab from "@/assets/project-tradinglab.png";
 
 const projects = [
   {
@@ -14,6 +15,14 @@ const projects = [
     img: pPanovi,
     stack: ["Next.js", "Tailwind"],
     href: "https://www.panovi.mk/",
+  },
+  {
+    title: "TradingLab.mk",
+    tag: "Trading Platform",
+    desc: "Financial trading platform with real-time market data, analytics, and trading tools for commodities & crypto.",
+    img: pTradingLab,
+    stack: ["React", "TypeScript", "Node.js", "WebSockets"],
+    href: "https://tradinglab.mk/",
   },
   {
     title: "The Wild Oasis",
