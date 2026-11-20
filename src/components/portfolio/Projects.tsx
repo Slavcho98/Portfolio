@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import pDashboard from "@/assets/project-dashboard.png";
-import pBrainarc from "@/assets/project-brainarc.png";
 import pBankist from "@/assets/project-bankist.png";
 import pPanovi from "@/assets/project-panovi.png";
 import pSprouts from "@/assets/project-sprouts.jpg";
@@ -23,14 +22,6 @@ const projects = [
     img: pPanovi,
     stack: ["Next.js", "Tailwind"],
     href: "https://www.panovi.mk/",
-  },
-  {
-    title: "BrainARC",
-    tag: "React Website",
-    desc: "Multilingual consulting website for child & adolescent psychiatry.",
-    img: pBrainarc,
-    stack: ["React", "Tailwind CSS"],
-    href: "https://brainarc-skopje.mk/",
   },
   {
     title: "The Wild Oasis",
