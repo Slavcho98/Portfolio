@@ -8,6 +8,14 @@ import pSprouts from "@/assets/project-sprouts.jpg";
 
 const projects = [
   {
+    title: "Velvora Cosmetics",
+    tag: "E-Commerce Store",
+    desc: "Full-stack beauty e-commerce platform with product catalog, shopping cart, and MongoDB backend.",
+    img: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1280&h=896&fit=crop",
+    stack: ["React", "TypeScript", "Express", "MongoDB", "Netlify", "Render"],
+    href: "https://velvora-cosmetics.netlify.app/",
+  },
+  {
     title: "Panovi",
     tag: "Corporate Site",
     desc: "Workwear manufacturer site with bilingual support and rich brand storytelling.",
