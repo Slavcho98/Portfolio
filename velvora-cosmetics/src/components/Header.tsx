@@ -28,8 +28,6 @@ export default function Header() {
   const { open } = useUi()
   const iconSize = 19
 
-  const isScrolled = scrollY > 50
-
   return (
     <>
       <div className="announce" id="top">
@@ -40,7 +38,7 @@ export default function Header() {
       </div>
 
       <motion.header
-        className={isScrolled ? 'header header--scrolled' : 'header'}
+        className="header"
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
