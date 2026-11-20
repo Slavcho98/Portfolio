@@ -28,8 +28,8 @@ export default function Header() {
   const { open } = useUi()
 
   const isScrolled = scrollY > 50
-  const scale = isScrolled ? 0.6 : 1
-  const iconSize = isScrolled ? 24 : 19
+  const scale = isScrolled ? 0.9 : 1
+  const iconSize = isScrolled ? 19 : 19
 
   return (
     <>
