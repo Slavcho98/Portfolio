@@ -3,7 +3,6 @@ import { motion } from 'motion/react'
 import { useCart } from '../cart/CartContext'
 import { useUi } from '../ui/UiContext'
 import { useWishlist } from '../wishlist/WishlistContext'
-import { useScrollPosition } from '../hooks/useScrollPosition'
 import { BagIcon, ChevronDown, CloseIcon, HeartIcon, MenuIcon, SearchIcon, UserIcon } from './Icons'
 
 const nav = [
@@ -22,7 +21,6 @@ const bump = {
 
 export default function Header() {
   const [menu, setMenu] = useState(false)
-  const scrollY = useScrollPosition()
   const { priced } = useCart()
   const { ids } = useWishlist()
   const { open } = useUi()
@@ -95,7 +93,7 @@ export default function Header() {
             aria-expanded={menu}
             onClick={() => setMenu((v) => !v)}
           >
-            {menu ? <CloseIcon size={isScrolled ? 28 : 22} /> : <MenuIcon size={isScrolled ? 30 : 24} />}
+            {menu ? <CloseIcon size={22} /> : <MenuIcon size={24} />}
           </button>
         </div>
       </motion.header>
