@@ -26,6 +26,7 @@ export default function Header() {
   const { priced } = useCart()
   const { ids } = useWishlist()
   const { open } = useUi()
+  const iconSize = 19
 
   const isScrolled = scrollY > 50
 
