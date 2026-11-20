@@ -5,13 +5,14 @@ import pBrainarc from "@/assets/project-brainarc.png";
 import pBankist from "@/assets/project-bankist.png";
 import pPanovi from "@/assets/project-panovi.png";
 import pSprouts from "@/assets/project-sprouts.jpg";
+import pVelvora from "@/assets/project-velvora.png";
 
 const projects = [
   {
     title: "Velvora Cosmetics",
     tag: "E-Commerce Store",
     desc: "Full-stack beauty e-commerce platform with product catalog, shopping cart, and MongoDB backend.",
-    img: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1280&h=896&fit=crop",
+    img: pVelvora,
     stack: ["React", "TypeScript", "Express", "MongoDB", "Netlify", "Render"],
     href: "https://velvora-cosmetics.netlify.app/",
   },
