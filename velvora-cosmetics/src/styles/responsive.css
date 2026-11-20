@@ -48,7 +48,7 @@
   .grid { gap: 28px 12px; }
   .card__imgwrap { border-radius: 20px; }
   .card__body { padding: 12px 2px 0; }
-  .card__body h3 { font-size: 21px; }
+  .card__body h3 { font-size: 16px; }
   .card__body p { display: none; }
   .card__quick { left: 8px; right: 8px; bottom: 8px; height: 40px; font-size: 12px; border-radius: 13px; }
   .card__picker { left: 8px; right: 8px; bottom: 56px; }
