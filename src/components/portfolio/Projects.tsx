@@ -25,14 +25,6 @@ const projects = [
     href: "https://tradinglab.mk/",
   },
   {
-    title: "The Wild Oasis",
-    tag: "SaaS Dashboard",
-    desc: "Hotel management dashboard with bookings, sales analytics & occupancy tracking.",
-    img: pDashboard,
-    stack: ["React", "Styled Components", "Supabase"],
-    href: "https://wildoasisbooking.netlify.app/login",
-  },
-  {
     title: "Velvora Cosmetics",
     tag: "E-Commerce Store",
     desc: "Full-stack beauty e-commerce platform with product catalog, shopping cart, and MongoDB backend.",
@@ -40,6 +32,14 @@ const projects = [
     stack: ["React", "TypeScript", "Express", "MongoDB", "Netlify", "Render"],
     href: "https://velvora-cosmetics.netlify.app/",
     isDemo: true,
+  },
+  {
+    title: "The Wild Oasis",
+    tag: "SaaS Dashboard",
+    desc: "Hotel management dashboard with bookings, sales analytics & occupancy tracking.",
+    img: pDashboard,
+    stack: ["React", "Styled Components", "Supabase"],
+    href: "https://wildoasisbooking.netlify.app/login",
   },
   {
     title: "Bankist",
