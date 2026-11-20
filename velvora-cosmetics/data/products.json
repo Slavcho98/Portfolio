@@ -33,7 +33,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 33,
+    "oldPrice": 90
   },
   {
     "slug": "moisture-balm",
@@ -69,7 +71,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 29,
+    "oldPrice": 68
   },
   {
     "slug": "lactic-acid-treatment",
@@ -105,7 +109,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 12,
+    "oldPrice": 80
   },
   {
     "slug": "daily-mineral-sunscreen-spf-50",
@@ -135,7 +141,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 12,
+    "oldPrice": 36
   },
   {
     "slug": "retinol-night-renewal",
@@ -164,7 +172,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 23,
+    "oldPrice": 96
   },
   {
     "slug": "gentle-exfoliating-enzyme-powder",
@@ -193,7 +203,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 12,
+    "oldPrice": 45
   },
   {
     "slug": "oil-infused-lip-tint",
@@ -222,7 +234,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 31,
+    "oldPrice": 80
   },
   {
     "slug": "niacinamide-pore-refiner",
@@ -252,7 +266,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 28,
+    "oldPrice": 53
   },
   {
     "slug": "peptide-firming-cream",
@@ -282,7 +298,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 16,
+    "oldPrice": 98
   },
   {
     "slug": "micellar-cleansing-water",
@@ -312,7 +330,9 @@
       "vegan"
     ],
     "vegan": true,
-    "crueltyFree": true
+    "crueltyFree": true,
+    "discountPercent": 19,
+    "oldPrice": 27
   },
   {
     "slug": "hydra-shine-lip-lacquer",
