@@ -1,0 +1,94 @@
+[
+  {
+    "slug": "purity-made-cleanser",
+    "sku": "PURITY-001",
+    "name": "Purity Made Cleanser",
+    "brand": "Velvora",
+    "category": "skincare",
+    "subcategory": "Cleansers",
+    "blurb": "Gentle gel cleanser for all skin types",
+    "description": "A lightweight, pH-balanced gel cleanser that removes makeup and impurities without over-drying. Infused with soothing botanicals for a fresh, clean feel.",
+    "price": 24.99,
+    "size": "150ml",
+    "rating": 4.8,
+    "reviewCount": 234,
+    "stock": 150,
+    "images": [
+      {
+        "src": "/products/purity-made-cleanser-1.webp",
+        "alt": "Purity Made Cleanser",
+        "role": "primary"
+      }
+    ],
+    "benefits": ["Removes makeup", "Gentle formula", "Hydrating"],
+    "highlights": ["pH-balanced", "All skin types", "Cruelty-free"],
+    "vegan": true,
+    "crueltyFree": true,
+    "tags": ["cleanser", "skincare", "gentle"]
+  },
+  {
+    "slug": "moisture-balm",
+    "sku": "MOISTURE-001",
+    "name": "Moisture Balm",
+    "brand": "Velvora",
+    "category": "skincare",
+    "subcategory": "Moisturizers",
+    "blurb": "Rich hydrating balm for dry skin",
+    "description": "A luxurious moisture balm with shea butter and ceramides. Locks in hydration and soothes sensitive skin, leaving it soft and supple.",
+    "price": 32.99,
+    "size": "50ml",
+    "rating": 4.9,
+    "reviewCount": 456,
+    "oldPrice": 39.99,
+    "discountPercent": 17,
+    "stock": 200,
+    "images": [
+      {
+        "src": "/products/moisture-balm-1.webp",
+        "alt": "Moisture Balm",
+        "role": "primary"
+      }
+    ],
+    "benefits": ["Deep hydration", "Nourishing", "Soothing"],
+    "highlights": ["With shea butter", "Ceramides", "Sensitive skin friendly"],
+    "keyIngredients": [
+      { "name": "Shea Butter", "purpose": "Nourishing" },
+      { "name": "Ceramides", "purpose": "Barrier repair" }
+    ],
+    "vegan": false,
+    "crueltyFree": true,
+    "tags": ["moisturizer", "hydrating", "luxury"]
+  },
+  {
+    "slug": "lactic-acid-treatment",
+    "sku": "LACTIC-001",
+    "name": "Lactic Acid Treatment",
+    "brand": "Velvora",
+    "category": "skincare",
+    "subcategory": "Serums & Treatments",
+    "blurb": "Gentle chemical exfoliant for smooth skin",
+    "description": "A mild lactic acid serum that gently exfoliates dead skin cells, revealing brighter, smoother skin. Perfect for sensitive skin types seeking gentle chemical exfoliation.",
+    "price": 28.99,
+    "size": "30ml",
+    "rating": 4.7,
+    "reviewCount": 189,
+    "stock": 120,
+    "images": [
+      {
+        "src": "/products/lactic-acid-treatment-1.webp",
+        "alt": "Lactic Acid Treatment",
+        "role": "primary"
+      }
+    ],
+    "benefits": ["Exfoliates gently", "Brightens skin", "Smoothing"],
+    "highlights": ["Mild formula", "5% lactic acid", "Sensitive skin approved"],
+    "keyIngredients": [
+      { "name": "Lactic Acid 5%", "purpose": "Chemical exfoliation" },
+      { "name": "Hyaluronic Acid", "purpose": "Hydration" }
+    ],
+    "howToUse": ["Apply to clean, dry face", "Use 2-3 times per week", "Follow with moisturizer"],
+    "vegan": true,
+    "crueltyFree": true,
+    "tags": ["exfoliant", "treatment", "gentle"]
+  }
+]
