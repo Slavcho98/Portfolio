@@ -26,6 +26,7 @@ export default function Header() {
   const { priced } = useCart()
   const { ids } = useWishlist()
   const { open } = useUi()
+  const iconSize = 19
 
   const isScrolled = scrollY > 50
 
@@ -41,11 +42,10 @@ export default function Header() {
       <motion.header
         className={isScrolled ? 'header header--scrolled' : 'header'}
         initial={{ y: -40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1, width: isScrolled ? '60%' : '100%' }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{
           y: { type: 'spring', stiffness: 260, damping: 26, delay: 0.1 },
-          opacity: { type: 'spring', stiffness: 260, damping: 26, delay: 0.1 },
-          width: { type: 'spring', stiffness: 300, damping: 30 }
+          opacity: { type: 'spring', stiffness: 260, damping: 26, delay: 0.1 }
         }}
         style={{ transformOrigin: 'top center' }}
       >
