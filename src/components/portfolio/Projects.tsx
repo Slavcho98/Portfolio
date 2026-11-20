@@ -8,14 +8,6 @@ import pVelvora from "@/assets/project-velvora.png";
 
 const projects = [
   {
-    title: "Velvora Cosmetics",
-    tag: "E-Commerce Store",
-    desc: "Full-stack beauty e-commerce platform with product catalog, shopping cart, and MongoDB backend.",
-    img: pVelvora,
-    stack: ["React", "TypeScript", "Express", "MongoDB", "Netlify", "Render"],
-    href: "https://velvora-cosmetics.netlify.app/",
-  },
-  {
     title: "Panovi",
     tag: "Corporate Site",
     desc: "Workwear manufacturer site with bilingual support and rich brand storytelling.",
@@ -30,6 +22,15 @@ const projects = [
     img: pDashboard,
     stack: ["React", "Styled Components", "Supabase"],
     href: "https://wildoasisbooking.netlify.app/login",
+  },
+  {
+    title: "Velvora Cosmetics",
+    tag: "E-Commerce Store",
+    desc: "Full-stack beauty e-commerce platform with product catalog, shopping cart, and MongoDB backend.",
+    img: pVelvora,
+    stack: ["React", "TypeScript", "Express", "MongoDB", "Netlify", "Render"],
+    href: "https://velvora-cosmetics.netlify.app/",
+    isDemo: true,
   },
   {
     title: "Bankist",
@@ -107,6 +108,11 @@ export const Projects = () => {
                 <ArrowUpRight className="size-5 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
               </div>
               <p className="text-muted-foreground text-sm mb-4">{p.desc}</p>
+              {p.isDemo && (
+                <p className="text-xs text-amber-600 dark:text-amber-400 mb-3 italic">
+                  ⚡ Demo project for learning & portfolio purposes
+                </p>
+              )}
               <div className="flex flex-wrap gap-2">
                 {p.stack.map((s) => (
                   <span
