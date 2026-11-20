@@ -28,8 +28,6 @@ export default function Header() {
   const { open } = useUi()
 
   const isScrolled = scrollY > 50
-  const scale = isScrolled ? 0.9 : 1
-  const iconSize = isScrolled ? 19 : 19
 
   return (
     <>
@@ -43,11 +41,11 @@ export default function Header() {
       <motion.header
         className={isScrolled ? 'header header--scrolled' : 'header'}
         initial={{ y: -40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1, scale }}
+        animate={{ y: 0, opacity: 1, width: isScrolled ? '60%' : '100%' }}
         transition={{
           y: { type: 'spring', stiffness: 260, damping: 26, delay: 0.1 },
           opacity: { type: 'spring', stiffness: 260, damping: 26, delay: 0.1 },
-          scale: { type: 'spring', stiffness: 300, damping: 30 }
+          width: { type: 'spring', stiffness: 300, damping: 30 }
         }}
         style={{ transformOrigin: 'top center' }}
       >
