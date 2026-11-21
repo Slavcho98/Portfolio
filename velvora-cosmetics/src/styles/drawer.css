@@ -51,5 +51,9 @@
   .drawer-item__img { width: 64px; height: 64px; }
   .drawer-item__info h3 { font-size: 15px; line-height: 1.2; }
   .drawer__subtotal span:last-child { font-size: 26px; }
-  .drawer__hint { margin-bottom: 12px; }
+  .drawer__hint { display: none; }
+  .drawer__subtotal { margin-bottom: 14px; }
+  .drawer__actions { flex-direction: row; }
+  .drawer__actions .btn { flex: 1; width: auto; padding: 14px 12px; white-space: nowrap; }
+  .ship-meter--compact { margin-bottom: 12px; }
 }
