@@ -50,7 +50,7 @@ function Sheet({ open, onClose, label, title, count, footer, children }: Props) 
             onDragEnd={(_, info) => {
               if (info.offset.y > 100 || info.velocity.y > 300) onClose()
             }}
-            style={{ maxHeight: '80vh', borderRadius: '28px 28px 0 0', display: 'flex', flexDirection: 'column', padding: '28px 0 0', textAlign: 'left' }}
+            style={{ maxHeight: '90vh', borderRadius: '28px 28px 0 0', display: 'flex', flexDirection: 'column', padding: '28px 0 0', textAlign: 'left' }}
           >
             <div className="sheet__grip" />
 
