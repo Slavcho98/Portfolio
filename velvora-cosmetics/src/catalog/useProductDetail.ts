@@ -17,7 +17,7 @@ export function useProductDetail(slug: string) {
   useEffect(() => {
     if (cache.has(slug)) return
     const controller = new AbortController()
-    fetch(`/api/products/${encodeURIComponent(slug)}`, { signal: controller.signal })
+    fetch(`${import.meta.env.VITE_API_URL ?? "/api"}/products/${encodeURIComponent(slug)}`, { signal: controller.signal })
       .then(async (res) => {
         if (res.status === 404) return setState({ status: 'missing' })
         if (!res.ok) throw new Error(String(res.status))
