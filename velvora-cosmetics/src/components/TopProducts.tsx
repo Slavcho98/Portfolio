@@ -9,16 +9,20 @@ import ProductSkeletons from './ProductSkeletons'
 
 type Tab = 'newest' | 'popular' | 'featured' | 'sale'
 
-const tabs: { key: Tab; label: string; sort: string }[] = [
+const baseTabs: { key: Tab; label: string; sort: string }[] = [
   { key: 'newest', label: 'Newest', sort: 'newest' },
   { key: 'popular', label: 'Popular', sort: 'popular' },
   { key: 'featured', label: 'Featured', sort: 'featured' },
-  { key: 'sale', label: 'On sale', sort: 'featured' },
 ]
+const saleTab = { key: 'sale' as Tab, label: 'On sale', sort: 'featured' }
 
 export default function TopProducts() {
-  const [tab, setTab] = useState<Tab>('newest')
+  const [picked, setTab] = useState<Tab | null>(null)
   const { products, status } = useCatalog()
+
+  const hasSale = onSale(products).length > 0
+  const tabs = hasSale ? [saleTab, ...baseTabs] : baseTabs
+  const tab = picked ?? (hasSale ? 'sale' : 'newest')
 
   const list = tab === 'newest' ? newest(products) : tab === 'popular' ? popular(products) : tab === 'featured' ? featured(products) : onSale(products)
   const current = tabs.find((t) => t.key === tab)!
