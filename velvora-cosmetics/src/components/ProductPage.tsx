@@ -344,7 +344,7 @@ function ProductView({ product, detail }: { product: Product; detail?: ProductDe
 
           <motion.div variants={riseChild} className="pinfo__buy">
             <Stepper name={product.name} qty={safeQty} onChange={setQty} min={1} max={maxQty} />
-            <div style={{ position: 'relative' }}>
+            <div className="pinfo__addwrap">
               <motion.button
                 className={`btn pinfo__add ${added ? 'is-added' : ''}`}
                 disabled={!inStock}
@@ -375,7 +375,7 @@ function ProductView({ product, detail }: { product: Product; detail?: ProductDe
                 )}
               </AnimatePresence>
             </div>
-            <div style={{ position: 'relative' }}>
+            <div className="pinfo__wishwrap">
               <motion.button
                 className={`pinfo__wish ${wished ? 'is-on' : ''}`}
                 aria-pressed={wished}

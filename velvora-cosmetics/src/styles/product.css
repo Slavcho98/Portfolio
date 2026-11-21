@@ -57,6 +57,8 @@
 .pinfo__buy { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
 .pinfo__buy .stepper { padding: 6px; }
 .pinfo__buy .stepper button, .pinfo__buy .stepper__value { width: 36px; height: 36px; }
+.pinfo__addwrap { position: relative; flex: 1; display: flex; }
+.pinfo__wishwrap { position: relative; flex-shrink: 0; }
 .pinfo__add { flex: 1; min-height: 56px; white-space: nowrap; }
 .pinfo__add span { display: inline-flex; align-items: center; gap: 8px; }
 .pinfo__add.is-added { background: #2f9e6b; border-color: #2f9e6b; }
@@ -125,7 +127,7 @@
 @media (max-width: 600px) {
   .gallery__main { border-radius: 28px; }
   .pinfo__buy { flex-wrap: wrap; }
-  .pinfo__add { order: 3; flex-basis: 100%; }
+  .pinfo__addwrap { order: 3; flex-basis: 100%; }
   .pinfo__buy .stepper { margin-right: auto; }
   .specs > div { grid-template-columns: 1fr; gap: 2px; }
   .ratings__score strong { font-size: 72px; }

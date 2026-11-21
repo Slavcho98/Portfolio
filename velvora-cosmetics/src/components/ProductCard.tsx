@@ -62,7 +62,7 @@ export default function ProductCard({ product: p }: { product: Product }) {
 
         {badge && <span className={`card__badge ${badge.startsWith('-') ? 'is-sale' : ''}`}>{badge}</span>}
 
-        <div style={{ position: 'relative' }}>
+        <div className="card__wishwrap">
           <motion.button
             className={`card__wish ${wished ? 'is-on' : ''}`}
             aria-label={wished ? `Remove ${p.name} from wishlist` : `Add ${p.name} to wishlist`}
