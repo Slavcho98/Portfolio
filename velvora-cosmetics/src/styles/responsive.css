@@ -36,7 +36,7 @@
   .cart-line__img { grid-area: img; align-self: start; }
   .cart-line__img img, .cart-line__img .ph { width: 88px; height: 88px; }
   .cart-line__info { grid-area: info; }
-  .cart-line__info h3 { font-size: 22px; }
+  .cart-line__info h3 { font-size: 15px; line-height: 1.2; }
   .stepper { grid-area: stepper; justify-self: start; align-self: end; }
   .cart-line__total { grid-area: total; align-self: end; }
   .cart-line__remove { grid-area: remove; }

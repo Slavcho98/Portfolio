@@ -20,7 +20,7 @@
 }
 .cart-line__img img, .cart-line__img .ph { display: block; width: 110px; height: 110px; border-radius: 20px; object-fit: cover; }
 .cart-line__info { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
-.cart-line__info h3 { font-size: 26px; line-height: 1.05; }
+.cart-line__info h3 { font-size: 22px; line-height: 1.05; }
 .cart-line__unit { font-size: 13px; color: var(--muted); }
 .stepper { display: inline-flex; align-items: center; padding: 4px; border-radius: 999px; border: 1px solid var(--line); }
 .stepper button { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; transition: background .2s; }
