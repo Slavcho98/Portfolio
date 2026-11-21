@@ -16,7 +16,7 @@
   .nav ul { flex-direction: column; }
   .nav a { padding: 14px 18px; }
   .grid { grid-template-columns: repeat(2, 1fr); }
-  .hero { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: calc(-1 * var(--pad)); padding-inline: var(--pad); width: auto; max-width: none; scroll-padding-inline: var(--pad); }
+  .hero { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
   .hero::-webkit-scrollbar { display: none; }
   .hero__panel { flex: 0 0 88%; scroll-snap-align: start; }
   .hero__panel { min-height: 460px; }
