@@ -12,6 +12,7 @@ import { CloseIcon, EmptyBoxIcon, FilterIcon, SearchLensIcon, SidebarCloseIcon, 
 import ProductCard from './ProductCard'
 import ProductSkeletons from './ProductSkeletons'
 import Seo from './Seo'
+import SortSelect from './SortSelect'
 
 const categoryName = Object.fromEntries(categories.map((c) => [c.slug, c.name])) as Record<string, string>
 const PAGE_SIZE = 24
@@ -155,9 +156,13 @@ export default function ShopPage({ params }: { params: URLSearchParams }) {
               </button>
             )}
 
-            <select className="sort" value={filters.sort} onChange={(e) => update({ sort: e.target.value as SortKey })} aria-label="Sort products">
-              {(Object.keys(SORT_LABELS) as SortKey[]).map((k) => <option key={k} value={k}>Sort: {SORT_LABELS[k]}</option>)}
-            </select>
+            <SortSelect
+              label="Sort products"
+              prefix="Sort: "
+              value={filters.sort}
+              options={(Object.keys(SORT_LABELS) as SortKey[]).map((k) => ({ value: k, label: SORT_LABELS[k] }))}
+              onChange={(sort) => update({ sort })}
+            />
           </div>
 
           <div className="shop-meta" aria-live="polite">
