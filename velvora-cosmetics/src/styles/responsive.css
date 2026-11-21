@@ -45,7 +45,7 @@
   .announce__lang, .hide-sm { display: none; }
   .logo { font-size: 24px; }
   .header--scrolled .logo { font-size: 24px; }
-  .filter-btn { width: 44px; height: 44px; padding: 0; display: grid; place-items: center; font-size: 0; }
+  .filter-btn { width: 44px; height: 44px; padding: 0; gap: 0; display: flex; align-items: center; justify-content: center; font-size: 0; }
   .filter-btn svg { font-size: 16px; }
   .grid { gap: 28px 12px; }
   .card__imgwrap { border-radius: 20px; }
