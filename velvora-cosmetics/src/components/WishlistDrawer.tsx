@@ -46,7 +46,7 @@ export default function WishlistDrawer() {
           <a href="#/shop" className="btn" onClick={close}>Browse products <ArrowRight size={16} /></a>
         </div>
       ) : (
-        <motion.ul className="drawer-list" variants={staggerParent(0.06, 0.12)} initial="hidden" animate="show">
+        <motion.ul className="drawer-list" variants={staggerParent(0.06, 0.12)} initial={false} animate="show">
           <AnimatePresence mode="popLayout" initial={false}>
             {items.map((p) => (
               <motion.li

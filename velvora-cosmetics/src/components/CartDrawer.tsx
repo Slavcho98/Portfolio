@@ -73,7 +73,7 @@ export default function CartDrawer() {
           <a href="#/shop" className="btn" onClick={close}>Start shopping <ArrowRight size={16} /></a>
         </div>
       ) : (
-        <motion.ul className="drawer-list" variants={staggerParent(0.06, 0.12)} initial="hidden" animate="show">
+        <motion.ul className="drawer-list" variants={staggerParent(0.06, 0.12)} initial={false} animate="show">
           <AnimatePresence mode="popLayout" initial={false}>
             {priced.lines.map((l) => (
               <motion.li

@@ -43,14 +43,14 @@ function Sheet({ open, onClose, label, title, count, footer, children }: Props) 
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
-            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            transition={{ type: 'spring', stiffness: 420, damping: 40, mass: 0.8 }}
             drag="y"
             dragConstraints={{ top: 0, bottom: 0 }}
             dragElastic={{ top: 0, bottom: 0.3 }}
             onDragEnd={(_, info) => {
               if (info.offset.y > 100 || info.velocity.y > 300) onClose()
             }}
-            style={{ maxHeight: '90vh', borderRadius: '28px 28px 0 0', display: 'flex', flexDirection: 'column', padding: '28px 0 0', textAlign: 'left' }}
+            style={{ maxHeight: '90vh', borderRadius: '28px 28px 0 0', display: 'flex', flexDirection: 'column', padding: '28px 0 0', textAlign: 'left', willChange: 'transform' }}
           >
             <div className="sheet__grip" />
 
