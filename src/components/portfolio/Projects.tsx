@@ -30,7 +30,7 @@ const projects = [
     desc: "Full-stack beauty e-commerce platform with product catalog, shopping cart, and MongoDB backend.",
     img: pVelvora,
     stack: ["React", "TypeScript", "Express", "MongoDB", "Netlify", "Render"],
-    href: "https://velvora-cosmetics.netlify.app/",
+    href: "https://velvora-cosmetics.onrender.com/",
     isDemo: true,
   },
   {
