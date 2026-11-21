@@ -24,6 +24,7 @@ import {
   FiX,
 } from 'react-icons/fi'
 import { FaFacebookF, FaHeart, FaInstagram, FaPlay, FaWhatsapp, FaYoutube } from 'react-icons/fa6'
+import { FaShippingFast } from 'react-icons/fa'
 import { LuLeaf, LuPanelLeftClose, LuPanelLeftOpen } from 'react-icons/lu'
 import { LuDroplet, LuEye, LuFlaskConical, LuPackageOpen, LuPalette, LuSearch, LuSlidersHorizontal, LuSmile, LuSparkles, LuWind } from 'react-icons/lu'
 import type { CategorySlug } from '../catalog/types'
@@ -62,6 +63,7 @@ export {
   FiUser as UserIcon,
   FiX as CloseIcon,
   FaFacebookF as FacebookIcon,
+  FaShippingFast as ShippingFastIcon,
   FaInstagram as InstagramIcon,
   FaWhatsapp as WhatsappIcon,
   FaYoutube as YoutubeIcon,

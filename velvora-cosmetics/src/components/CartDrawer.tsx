@@ -7,7 +7,7 @@ import { slideChild, staggerParent } from '../ui/motion'
 import { useUi } from '../ui/UiContext'
 import AnimatedMoney from './AnimatedMoney'
 import MobileSheet from './MobileSheet'
-import { ArrowRight, BagIcon, TrashIcon, TruckIcon } from './Icons'
+import { ArrowRight, BagIcon, ShippingFastIcon, TrashIcon } from './Icons'
 import Stepper from './Stepper'
 import ProductImage from './ProductImage'
 
@@ -21,7 +21,7 @@ export default function CartDrawer() {
     <>
       <div className="ship-meter ship-meter--compact">
         <p>
-          <TruckIcon size={16} />
+          <ShippingFastIcon size={16} />
           <span>
             {priced.remainingForFreeShipping > 0 ? (
               <>Add <strong>{money(priced.remainingForFreeShipping)}</strong> more for free shipping</>

@@ -7,7 +7,7 @@ import { sortProducts, productHref } from '../catalog/selectors'
 import { useCatalog } from '../catalog/CatalogContext'
 import { slideChild, staggerParent } from '../ui/motion'
 import AnimatedMoney from './AnimatedMoney'
-import { ArrowLeft, ArrowRight, BagIcon, CloseIcon, LeafIcon, ShieldIcon, TrashIcon, TruckIcon } from './Icons'
+import { ArrowLeft, ArrowRight, BagIcon, CloseIcon, LeafIcon, ShieldIcon, ShippingFastIcon, TrashIcon, TruckIcon } from './Icons'
 import ProductCard from './ProductCard'
 import ProductImage from './ProductImage'
 import Seo from './Seo'
@@ -70,7 +70,7 @@ export default function CartPage() {
           <div className="cart-main">
             <div className="ship-meter">
               <p>
-                <TruckIcon size={18} />
+                <ShippingFastIcon size={18} />
                 <span>
                   {priced.remainingForFreeShipping > 0 ? (
                     <>You're <strong>{money(priced.remainingForFreeShipping)}</strong> away from free shipping</>
