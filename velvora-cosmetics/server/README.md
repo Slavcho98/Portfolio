@@ -22,6 +22,10 @@ npm start            # same without file watching
 | `GET /api/products` | Paginated list in the light "card" shape. Query: `category`, `subcategory`, `brand`, `collection` (comma-separated allowed), `q`, `inStock=true`, `minPrice`, `maxPrice`, `sort` (`featured` · `popular` · `newest` · `price-asc` · `price-desc` · `rating` · `name`), `page`, `limit` (max 200), `view=full` for complete documents. Returns `{ items, total, page, pages, limit }` |
 | `GET /api/products/:slug` | The complete product document (ingredients, how to use, fragrance notes, SEO…) or 404 |
 | `GET /api/categories` | Per-category counts, price range and subcategories |
+| `POST /api/orders` | Places an order (no payment provider, test store). Body: `{ customer, shippingAddress, lines: [{ productId, variant?, qty }], promoCode?, note? }`. Prices, stock, promo and shipping are recomputed from MongoDB, anything the browser sends about money is ignored. `201` with the saved order, `422 { message, fields }` for invalid input or unavailable items, `429` after 15 orders/hour per IP |
+| `GET /api/orders/:orderNumber?email=` | Returns the order only when the number and the email it was placed with both match, else 404 |
+
+Orders are stored in the `orders` collection (see `src/models/Order.js`). Stock is validated but not decremented, so the demo catalogue never runs dry. Totals logic lives in `src/lib/pricing.js` and mirrors `src/cart/pricing.ts`; change both together.
 
 Set `PORT` (default 4000) and, if the storefront is hosted on another origin, `CORS_ORIGIN` in `server/.env`.
 

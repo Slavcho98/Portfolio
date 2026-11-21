@@ -4,6 +4,7 @@ import { CartProvider } from './cart/CartContext'
 import { CatalogProvider } from './catalog/CatalogContext'
 import CartDrawer from './components/CartDrawer'
 import CartPage from './components/CartPage'
+import CheckoutPage from './components/CheckoutPage'
 import Categories from './components/Categories'
 import Collections from './components/Collections'
 import ConfirmSheet from './components/ConfirmSheet'
@@ -12,6 +13,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
+import OrderPage from './components/OrderPage'
 import ScrollProgress from './components/ScrollProgress'
 import Seo from './components/Seo'
 import ShopPage from './components/ShopPage'
@@ -37,7 +39,7 @@ function Shell() {
     const routeChanged = previousRoute.current !== route
     previousRoute.current = route
 
-    if (route === 'cart' || route === 'product') {
+    if (route === 'cart' || route === 'product' || route === 'checkout' || route === 'order') {
       window.scrollTo(0, 0)
       return
     }
@@ -61,6 +63,10 @@ function Shell() {
       <main>
         {route === 'cart' ? (
           <CartPage />
+        ) : route === 'checkout' ? (
+          <CheckoutPage />
+        ) : route === 'order' ? (
+          <OrderPage key={slug} orderNumber={slug} />
         ) : route === 'shop' ? (
           <ShopPage params={params} />
         ) : route === 'product' ? (

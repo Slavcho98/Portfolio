@@ -13,7 +13,7 @@ import ProductImage from './ProductImage'
 
 export default function CartDrawer() {
   const { panel, close } = useUi()
-  const { priced, notify } = useCart()
+  const { priced } = useCart()
   const { removeLine, changeQty } = useCartRemoval()
   const empty = priced.lines.length === 0
 
@@ -56,12 +56,9 @@ export default function CartDrawer() {
         <a href="#/cart" className="btn btn--block" onClick={close}>
           View full bag <ArrowRight size={16} />
         </a>
-        <button
-          className="btn btn--ghost btn--block"
-          onClick={() => notify("Checkout isn't connected yet — plug your API in via src/cart/cartApi.ts")}
-        >
+        <a href="#/checkout" className="btn btn--ghost btn--block" onClick={close}>
           Checkout
-        </button>
+        </a>
       </div>
     </>
   )

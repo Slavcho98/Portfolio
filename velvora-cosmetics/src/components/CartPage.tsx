@@ -14,7 +14,7 @@ import Seo from './Seo'
 import Stepper from './Stepper'
 
 export default function CartPage() {
-  const { cart, priced, loading, applyPromo, removePromo, setNote, notify } = useCart()
+  const { cart, priced, loading, applyPromo, removePromo, setNote } = useCart()
   const { removeLine, changeQty, clearBag } = useCartRemoval()
   const catalog = useCatalog()
   const [code, setCode] = useState('')
@@ -196,13 +196,9 @@ export default function CartPage() {
               <div className="totals__grand"><dt>Total</dt><dd><AnimatedMoney value={priced.total} /></dd></div>
             </dl>
 
-            <motion.button
-              className="btn btn--light btn--block"
-              whileTap={{ scale: 0.97 }}
-              onClick={() => notify("Checkout isn't connected yet — plug your API in via src/cart/cartApi.ts")}
-            >
+            <motion.a href="#/checkout" className="btn btn--light btn--block" whileTap={{ scale: 0.97 }}>
               Checkout <ArrowRight size={16} />
-            </motion.button>
+            </motion.a>
 
             <ul className="assurances">
               <li><TruckIcon size={16} /> Ships in 1–2 business days</li>

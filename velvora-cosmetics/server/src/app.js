@@ -1,11 +1,13 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import Product from './models/Product.js'
+import ordersRouter from './routes/orders.js'
 import productsRouter from './routes/products.js'
 
 export function createApp() {
   const app = express()
   app.disable('x-powered-by')
+  app.set('trust proxy', 1) // behind Render's proxy, so req.ip is the visitor
   app.use(express.json({ limit: '100kb' }))
 
   // Same-origin in dev (Vite proxies /api). Set CORS_ORIGIN when the storefront is hosted elsewhere.
@@ -27,6 +29,7 @@ export function createApp() {
   })
 
   app.use('/api/products', productsRouter)
+  app.use('/api/orders', ordersRouter)
 
   app.get('/api/categories', async (req, res) => {
     const rows = await Product.aggregate([
