@@ -43,7 +43,8 @@ const orderSchema = new Schema(
     discount: { type: Number, required: true, min: 0 },
     shipping: { type: Number, required: true, min: 0 },
     total: { type: Number, required: true, min: 0 },
-    paymentMethod: { type: String, default: 'test-no-payment' },
+    // Mock only: nothing is ever charged.
+    paymentMethod: { type: String, enum: ['cod', 'apple-pay', 'google-pay', 'paypal'], default: 'cod' },
   },
   { versionKey: false, timestamps: true },
 )

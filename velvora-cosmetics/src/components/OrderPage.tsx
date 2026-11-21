@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { motion } from 'motion/react'
 import { money } from '../cart/pricing'
-import { OrderError, orderApi, recallOrder, rememberOrder, type Order } from '../checkout/orderApi'
+import { OrderError, PAYMENT_LABELS, orderApi, recallOrder, rememberOrder, type Order } from '../checkout/orderApi'
 import { ArrowRight, CheckIcon } from './Icons'
 import Seo from './Seo'
 
@@ -92,7 +92,7 @@ export default function OrderPage({ orderNumber }: { orderNumber: string }) {
               <p className="confirm__meta">{order.customer.email}{order.customer.phone && <> · {order.customer.phone}</>}</p>
               {order.note && <p className="confirm__meta">Note: {order.note}</p>}
               <h2>Payment</h2>
-              <p className="confirm__meta">Pay on delivery (demo)</p>
+              <p className="confirm__meta">{PAYMENT_LABELS[order.paymentMethod ?? 'cod']} (demo)</p>
             </div>
           </div>
 

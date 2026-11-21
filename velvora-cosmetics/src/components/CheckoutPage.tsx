@@ -1,15 +1,17 @@
-import { useState, type FormEvent } from 'react'
+import { useState, type FormEvent, type ReactNode } from 'react'
 import { motion } from 'motion/react'
 import { useCart } from '../cart/CartContext'
 import { money } from '../cart/pricing'
 import {
   OrderError,
+  PAYMENT_LABELS,
   orderApi,
   rememberOrder,
   type CustomerDetails,
+  type PaymentMethod,
   type ShippingAddress,
 } from '../checkout/orderApi'
-import { ArrowLeft, ArrowRight, BagIcon, ShieldIcon } from './Icons'
+import { ApplePayIcon, ArrowLeft, ArrowRight, BagIcon, GooglePayIcon, PaypalIcon, ShieldIcon, TruckIcon } from './Icons'
 import ProductImage from './ProductImage'
 import Seo from './Seo'
 import SortSelect from './SortSelect'
@@ -18,6 +20,13 @@ const COUNTRIES = [
   'North Macedonia', 'Albania', 'Austria', 'Bulgaria', 'Croatia', 'France', 'Germany', 'Greece', 'Italy',
   'Netherlands', 'Serbia', 'Slovenia', 'Spain', 'United Kingdom', 'United States',
 ].map((c) => ({ value: c, label: c }))
+
+const WALLETS: { id: PaymentMethod; hint: string; icon: ReactNode }[] = [
+  { id: 'cod', hint: 'Pay when your order arrives', icon: <TruckIcon size={22} /> },
+  { id: 'apple-pay', hint: 'Mock wallet, nothing is charged', icon: <ApplePayIcon size={44} /> },
+  { id: 'google-pay', hint: 'Mock wallet, nothing is charged', icon: <GooglePayIcon size={44} /> },
+  { id: 'paypal', hint: 'Mock wallet, nothing is charged', icon: <PaypalIcon size={22} /> },
+]
 
 type Errors = Record<string, string>
 
@@ -72,6 +81,7 @@ export default function CheckoutPage() {
   const [errors, setErrors] = useState<Errors>({})
   const [formError, setFormError] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
+  const [payment, setPayment] = useState<PaymentMethod>('cod')
 
   const setC = (patch: Partial<CustomerDetails>) => setCustomer((c) => ({ ...c, ...patch }))
   const setA = (patch: Partial<ShippingAddress>) => setAddress((a) => ({ ...a, ...patch }))
@@ -95,6 +105,7 @@ export default function CheckoutPage() {
         shippingAddress: address,
         note: cart.note,
         promoCode: cart.promoCode,
+        paymentMethod: payment,
         lines: cart.lines.map(({ productId, variant, qty }) => ({ productId, variant, qty })),
       })
       rememberOrder(order)
@@ -167,12 +178,18 @@ export default function CheckoutPage() {
 
             <fieldset className="cform">
               <legend>Payment</legend>
-              <div className="pay-demo">
-                <span className="pay-demo__dot" aria-hidden="true" />
-                <div>
-                  <strong>Pay on delivery (demo)</strong>
-                  <p>There is no payment provider connected, so nothing is charged.</p>
-                </div>
+              <div className="pay-options" role="radiogroup" aria-label="Payment method">
+                {WALLETS.map((w) => (
+                  <label key={w.id} className={`pay-option pay-option--${w.id} ${payment === w.id ? 'is-on' : ''}`}>
+                    <input type="radio" name="payment" value={w.id} checked={payment === w.id} onChange={() => setPayment(w.id)} />
+                    <span className="pay-option__icon">{w.icon}</span>
+                    <span className="pay-option__text">
+                      <strong>{PAYMENT_LABELS[w.id]}</strong>
+                      <small>{w.hint}</small>
+                    </span>
+                    <span className="pay-option__dot" aria-hidden="true" />
+                  </label>
+                ))}
               </div>
             </fieldset>
           </div>
@@ -208,7 +225,7 @@ export default function CheckoutPage() {
             {formError && <p className="checkout__error" role="alert">{formError}</p>}
 
             <motion.button className="btn btn--light btn--block" type="submit" disabled={submitting || loading} whileTap={{ scale: 0.97 }}>
-              {submitting ? 'Placing order…' : <>Place order · {money(priced.total)}</>}
+              {submitting ? 'Placing order…' : payment === 'cod' ? <>Place order · {money(priced.total)}</> : <>Pay with {PAYMENT_LABELS[payment]} · {money(priced.total)}</>}
             </motion.button>
           </aside>
         </form>

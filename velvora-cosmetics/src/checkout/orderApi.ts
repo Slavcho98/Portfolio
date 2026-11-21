@@ -11,11 +11,21 @@ export type ShippingAddress = {
   country: string
 }
 
+export type PaymentMethod = 'cod' | 'apple-pay' | 'google-pay' | 'paypal'
+
+export const PAYMENT_LABELS: Record<PaymentMethod, string> = {
+  cod: 'Pay on delivery',
+  'apple-pay': 'Apple Pay',
+  'google-pay': 'Google Pay',
+  paypal: 'PayPal',
+}
+
 export type OrderRequest = {
   customer: CustomerDetails
   shippingAddress: ShippingAddress
   note?: string
   promoCode?: string
+  paymentMethod: PaymentMethod
   lines: Pick<CartLine, 'productId' | 'variant' | 'qty'>[]
 }
 
@@ -39,6 +49,7 @@ export type Order = {
   lines: OrderLine[]
   promoCode?: string
   note?: string
+  paymentMethod?: PaymentMethod
   subtotal: number
   discount: number
   shipping: number

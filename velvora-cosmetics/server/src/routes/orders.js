@@ -18,6 +18,8 @@ function limited(ip) {
   return recent.length > MAX_ORDERS_PER_WINDOW
 }
 
+const PAYMENT_METHODS = ['cod', 'apple-pay', 'google-pay', 'paypal']
+
 const ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
 const newOrderNumber = () => `VLV-${[...randomBytes(8)].map((b) => ALPHABET[b % ALPHABET.length]).join('')}`
 
@@ -59,7 +61,8 @@ function parseDetails(body) {
   if (!shippingAddress.country) fields['shippingAddress.country'] = 'Required'
   if (Object.keys(fields).length) throw new ValidationError('Please check the highlighted fields', fields)
 
-  return { customer, shippingAddress, note: text(body?.note, 500) }
+  const paymentMethod = PAYMENT_METHODS.includes(body?.paymentMethod) ? body.paymentMethod : 'cod'
+  return { customer, shippingAddress, note: text(body?.note, 500), paymentMethod }
 }
 
 // Prices and stock come from the database; whatever the browser says about money is ignored.
