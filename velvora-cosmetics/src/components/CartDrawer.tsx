@@ -21,7 +21,6 @@ export default function CartDrawer() {
     <>
       <div className="ship-meter ship-meter--compact">
         <p>
-          <ShippingFastIcon size={16} />
           <span>
             {priced.remainingForFreeShipping > 0 ? (
               <>Add <strong>{money(priced.remainingForFreeShipping)}</strong> more for free shipping</>
@@ -29,6 +28,7 @@ export default function CartDrawer() {
               <strong>Free shipping unlocked</strong>
             )}
           </span>
+          <ShippingFastIcon size={16} />
         </p>
         <div
           className="ship-meter__bar"

@@ -70,7 +70,6 @@ export default function CartPage() {
           <div className="cart-main">
             <div className="ship-meter">
               <p>
-                <ShippingFastIcon size={18} />
                 <span>
                   {priced.remainingForFreeShipping > 0 ? (
                     <>You're <strong>{money(priced.remainingForFreeShipping)}</strong> away from free shipping</>
@@ -78,6 +77,7 @@ export default function CartPage() {
                     <><strong>You've unlocked free shipping</strong> on this order</>
                   )}
                 </span>
+                <ShippingFastIcon size={18} />
               </p>
               <div
                 className="ship-meter__bar"
