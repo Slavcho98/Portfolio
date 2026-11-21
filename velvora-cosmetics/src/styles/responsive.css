@@ -60,6 +60,7 @@
   .top-products { padding-top: 64px; }
   .video__play { width: 76px; height: 76px; }
   .collection { padding: 24px; border-radius: 28px; }
+  .collection h3, .collection:first-child h3 { font-size: 28px; }
   .cart-summary { padding: 24px; border-radius: 28px; }
   .toast-region { bottom: 14px; }
 }
