@@ -50,12 +50,12 @@ function Sheet({ open, onClose, label, title, count, footer, children }: Props) 
             onDragEnd={(_, info) => {
               if (info.offset.y > 100 || info.velocity.y > 300) onClose()
             }}
-            style={{ maxHeight: '70vh', borderRadius: '28px 28px 0 0' }}
+            style={{ maxHeight: '80vh', borderRadius: '28px 28px 0 0', display: 'flex', flexDirection: 'column', padding: '28px 0 0', textAlign: 'left' }}
           >
             <div className="sheet__grip" />
 
-            <div style={{ maxHeight: 'calc(70vh - 80px)', overflowY: 'auto', overscrollBehavior: 'contain', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 24px', gap: '12px', flexShrink: 0 }}>
+            <div style={{ flex: 1, minHeight: 0, overflowY: 'auto', overscrollBehavior: 'contain', touchAction: 'pan-y', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 24px 12px', gap: '12px', flexShrink: 0 }}>
                 <h2 style={{ fontSize: '32px', margin: 0, flex: 1 }}>
                   {title}
                 </h2>
@@ -85,7 +85,7 @@ function Sheet({ open, onClose, label, title, count, footer, children }: Props) 
 
             {footer && (
               <div style={{
-                padding: '20px 28px calc(24px + env(safe-area-inset-bottom))',
+                padding: '16px 24px calc(20px + env(safe-area-inset-bottom))',
                 borderTop: '1px solid var(--line)',
                 background: 'var(--paper)',
                 flexShrink: 0,
