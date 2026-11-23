@@ -14,6 +14,12 @@ const testimonials = [
     name: "Panovi Team",
     role: "Panovi, Workwear Manufacturer",
   },
+  {
+    quote:
+      "Fast, clear and dependable. The platform feels sharp, loads quickly and handles live market data without a hitch.",
+    name: "TradingLab Team",
+    role: "TradingLab.mk, Trading Platform",
+  },
 ];
 
 export const Testimonials = () => {
@@ -34,7 +40,7 @@ export const Testimonials = () => {
         </h2>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {testimonials.map((t, i) => (
           <motion.figure
             key={t.name}
